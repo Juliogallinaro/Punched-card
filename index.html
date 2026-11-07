@@ -1051,7 +1051,6 @@ function init3D(){
     const side=(z0,z1,y0,y1,R)=>{const s=new T.Shape();s.moveTo(z0,y0);s.lineTo(z1,y0);s.lineTo(z1,y1-R);s.quadraticCurveTo(z1,y1,z1-R,y1);s.lineTo(z0+R*.5,y1);s.quadraticCurveTo(z0,y1,z0,y1-R*.5);s.lineTo(z0,y0);return s};
     const wellM=mat('#e6e7e1',.6,.05),finM=mat('#d9dbd5',.35,.35);
     ex(side(-12.5,-4.2,35.6,42.4,2.6),22.6,-22.6,bL);                  // carenagem de trás, sobre o poço
-    box(22,6.6,.3,wellM,-11.2,38.9,-4.05,g);                            // fundo claro do poço
     box(19,.4,12.3,wellM,-12.7,35.8,2.1,g);                             // piso do poço
     ex(side(-12.5,5.6,35.6,44.4,3.4),25.22,-3.2,bL);  // da tampa do alimentador de perfuração (x −3,2) até a face da divisória de baixo (x 22,12)                       // capô da unidade de perfuração
     {const hd=box(6.5,.5,.5,trimM,11,40.6,5.75,g);box(2.2,.9,.6,trimM,11,40.6,5.8,g)} // puxador cromado
