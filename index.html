@@ -557,7 +557,7 @@ function init3D(){
   // sala
   box(124,1.2,0.6,mat('#7d8c84'),0,9.5,-16.9); // friso da parede
   // mesa e perfuradora
-  box(56,1,13,deskM,0,-0.5,-1);box(56,0.3,0.4,slate,0,0.05,5.4);
+  const _k029d=scene.children.length;box(56,1,13,deskM,0,-0.5,-1);box(56,0.3,0.4,slate,0,0.05,5.4);const _k029t=scene.children.slice(_k029d); // tampo da mesa do 029
   // ---------- o escritório: paredes, janelas, chão, teto e móveis ----------
   const WALLC='#aebdb5',FLOOR=-30,CEIL=78;
   const wallM=mat(WALLC,1);
@@ -668,6 +668,7 @@ function init3D(){
   const sideWin=new T.Group();sideWin.position.set(-61.9,0,0);sideWin.rotation.y=Math.PI/2;scene.add(sideWin);
   windowAt(sideWin,-8,20,22,26,.5);windowAt(sideWin,-38,20,22,26,.5);
   const winLight=new T.DirectionalLight('#eef4ff',.28*Math.PI);winLight.position.set(-60,30,10);winLight.target.position.set(0,0,0);scene.add(winLight,winLight.target);
+  const _k029=[scene.children.length];
   // mesa do 029: pés cromados e gabinete escuro embaixo
   const chromeM=mat('#c9cdcf',.25,.85),cabM=mat('#555b58',.65,.1);
   [[-27,-6.8],[27,-6.8],[-27,5],[27,5]].forEach(([x,z])=>{const l=new T.Mesh(new T.CylinderGeometry(.55,.55,29,14),chromeM);l.position.set(x,FLOOR+14.5,z);l.castShadow=true;scene.add(l)});
@@ -675,6 +676,7 @@ function init3D(){
   box(34,24,11,cabM,3,-13.5,-1.6);
   {const c=document.createElement('canvas');c.width=64;c.height=96;const g=c.getContext('2d');g.fillStyle='#3c4240';g.fillRect(0,0,64,96);g.fillStyle='#b4302a';g.fillRect(20,20,24,30);
    const m=new T.Mesh(new T.PlaneGeometry(2,3),new T.MeshBasicMaterial({map:new T.CanvasTexture(c)}));m.position.set(17.5,-6,3.95);scene.add(m)}
+  _k029.push(scene.children.length);
   // cadeira de datilógrafa
   {const ch=new T.Group();ch.position.set(-1,FLOOR,15);scene.add(ch);const blackM=mat('#22262a',.6),seatM=mat('#2e3438',.8);
    for(let i=0;i<5;i++){const a=i/5*Math.PI*2;const leg=new T.Mesh(new T.BoxGeometry(.9,.7,7),chromeM);leg.position.set(Math.sin(a)*3.4,1.6,Math.cos(a)*3.4);leg.rotation.y=a;ch.add(leg);
@@ -716,6 +718,7 @@ function init3D(){
    const wire=new T.Mesh(new T.CylinderGeometry(5,4,13,24,1,true),new T.MeshStandardMaterial({color:'#5c6360',roughness:.5,metalness:.5,side:T.DoubleSide,wireframe:true}));wire.position.y=6.5;bin.add(wire);
    const bot=new T.Mesh(new T.CircleGeometry(4,24),mat('#5c6360',.5,.5));bot.rotation.x=-Math.PI/2;bot.position.y=.1;bin.add(bot);
    V.binBalls=[];for(let i=0;i<10;i++){const b=new T.Mesh(new T.IcosahedronGeometry(1.5,0),mat('#efe1b0',.9));b.position.set(Math.sin(i*2.4)*2.2,1.5+Math.floor(i/3)*1.6,Math.cos(i*2.4)*2.2);b.rotation.set(i,i*2,i*3);b.visible=false;bin.add(b);V.binBalls.push(b)}}
+  _k029.push(scene.children.length);
   // gabinete cinza do 029, leito de alumínio rebaixado
   const ibm=mat('#a9aba7',.62,.05),alu=mat('#bfc3c5',.45,.35),aluD=mat('#9ca1a4',.38,.5),dark=mat('#2e3335',.6,.3);
   box(39,6,8,ibm,0,2.5,-12);box(39,5.4,1.6,ibm,0,2.2,-5.6);
@@ -804,6 +807,7 @@ function init3D(){
     const hit=new T.Mesh(new T.BoxGeometry(.9,.9,.9),new T.MeshBasicMaterial({visible:false}));hit.position.set(x,2.45,-2.85);hit.userData.sw=k;kb.add(hit);V.click.push(hit);
     V.sw[k]={g,rot:Math.PI/2}});
   V.swAnim=k=>{if(V.sw[k])V.sw[k].t=performance.now()};
+  {const k=new T.Group();k.name='k029';[..._k029t,...scene.children.slice(_k029[0],_k029[1]),...scene.children.slice(_k029[2],scene.children.length)].forEach(o=>k.add(o));scene.add(k);V.k029=k} // a 029 inteira num grupo (posição zero), para exportar e trocar de modelo
   // bandeja e arquivo de pedidos
   const pinkM=mat('#f1d0d5',.9);
   const tray=(x,z,name)=>{const g=new T.Group();g.position.set(x,0,z);scene.add(g);

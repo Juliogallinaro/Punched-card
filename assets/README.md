@@ -4,6 +4,7 @@ Arquivos `.glb` exportados direto do jogo (`node tools/export-glb.js` ou `npm ru
 
 | Arquivo | Conteúdo |
 |---|---|
+| `029-perfuradora.glb` | IBM 029 com a mesa: gabinete, leito, tambor de programa, alimentador, escaninho, teclado e painel de chaves |
 | `083-classificadora.glb` | IBM 083, com teclas, seletor de colunas, alimentador e bolsos |
 | `514-reprodutora.glb` | IBM 514, com alimentadores, empilhadores, luzes e teclas, painel |
 | `407-contabilizadora.glb` | IBM 407, com unidade de impressão, alimentador e painel de controle |

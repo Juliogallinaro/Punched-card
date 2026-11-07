@@ -24,7 +24,7 @@ const THREE_URL='https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.m
     walk(V.m,'',1);walk(V,'',1);
     Object.entries(V.panels||{}).forEach(([k,P])=>nm(P.mesh,'painel_'+k));
     (V.click||[]).forEach((o,i)=>nm(o,(o.material&&o.material.visible===false?'area_clique_':'clicavel_')+i));
-    const groups={'083-classificadora':V.m.srt,'514-reprodutora':V.m.p514,'407-contabilizadora':V.m.t4,'summa-15':V.calcG,'sala-completa':V.scene};
+    const groups={'029-perfuradora':V.k029,'083-classificadora':V.m.srt,'514-reprodutora':V.m.p514,'407-contabilizadora':V.m.t4,'summa-15':V.calcG,'sala-completa':V.scene};
     // áreas de clique invisíveis ficam fora do arquivo (no Blender apareceriam como blocos brancos)
     const hid=[];(V.click||[]).forEach(o=>{if(o.material&&o.material.visible===false&&o.parent){hid.push([o,o.parent]);o.parent.remove(o)}});
     const out={};const ex=new GLTFExporter();
