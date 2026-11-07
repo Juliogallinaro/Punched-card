@@ -1058,7 +1058,7 @@ function init3D(){
     box(4.2,1,2.2,dk,4.5,44.9,-1.2,g);box(4.6,.2,2.4,mat("#c9ccc6",.35,.4),8.9,44.5,-1.2,g); // peso escuro e placa no alto
     [[-20.5,'r'],[-10,'p']].forEach(([x,k])=>{
       // guias em ponta, iguais, encostadas no lado esquerdo do maço (na boca do alimentador)
-      [[2.7,0.4,7],[2.7,-2.6,7]].forEach(([dx,dz,ht])=>{const s=new T.Shape();s.moveTo(-1,0);s.lineTo(1,0);s.lineTo(.15,ht);s.lineTo(-.15,ht);s.lineTo(-1,0);
+      [[2.7,0.4,5],[2.7,-2.6,5]].forEach(([dx,dz,ht])=>{const s=new T.Shape();s.moveTo(-1,0);s.lineTo(1,0);s.lineTo(.15,ht);s.lineTo(-.15,ht);s.lineTo(-1,0);
         const f=new T.Mesh(new T.ExtrudeGeometry(s,{depth:.18,bevelEnabled:false}),finM);f.rotation.y=-Math.PI/2;f.position.set(x+dx+.09,36.0,3.5+dz);f.castShadow=true;g.add(f)});
       // tampa arredondada ao lado do alimentador
       {const w=4.2,ht=5,r=1.6,t=.32,ri=r-t,L=8.2,z0=-.6; // é o alimentador: o maço fica dentro
