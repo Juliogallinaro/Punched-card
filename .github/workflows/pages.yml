@@ -27,12 +27,11 @@ jobs:
         with:
           ref: main
           path: prod
-      - name: Checkout dev (se existir)
-        run: |
-          if git ls-remote --exit-code --heads "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" dev >/dev/null; then
-            git clone --depth 1 --branch dev "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" dev
-          fi
-      - run: sh prod/tools/build-pages.sh prod dev
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+          path: dev
+      - run: sh prod/tools/build-pages.sh prod dev && test -f _site/test/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
