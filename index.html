@@ -1065,7 +1065,11 @@ function init3D(){
       // tampa arredondada ao lado do alimentador
       {const s=new T.Shape(),w=4.2,ht=5,r=1.6,nw=1.3,nh=1.1; // recorte embaixo, do lado do maço: a garganta por onde o cartão entra
         s.moveTo(-w/2+nw,0);s.lineTo(w/2,0);s.lineTo(w/2,ht-r);s.quadraticCurveTo(w/2,ht,w/2-r,ht);s.lineTo(-w/2+r,ht);s.quadraticCurveTo(-w/2,ht,-w/2,ht-r);s.lineTo(-w/2,nh);s.lineTo(-w/2+nw,nh);s.lineTo(-w/2+nw,0);
-        const c=new T.Mesh(new T.ExtrudeGeometry(s,{depth:7,bevelEnabled:true,bevelThickness:.15,bevelSize:.15,bevelSegments:2,curveSegments:12}),bL);c.position.set(x+4.6,36,-.2);c.castShadow=c.receiveShadow=true;g.add(c)}});
+        // oca e aberta na frente, como um túnel: furo no perfil e tampa só no fundo
+        const t=.32,hl=new T.Path(),x0=-w/2+t,x1=w/2-t,y0=nh+t,y1=ht-t,ri=r-t;hl.moveTo(x0,y0);hl.lineTo(x0,y1-ri);hl.quadraticCurveTo(x0,y1,x0+ri,y1);hl.lineTo(x1-ri,y1);hl.quadraticCurveTo(x1,y1,x1,y1-ri);hl.lineTo(x1,y0);hl.lineTo(x0,y0);s.holes.push(hl);
+        const c=new T.Mesh(new T.ExtrudeGeometry(s,{depth:7,bevelEnabled:true,bevelThickness:.12,bevelSize:.12,bevelSegments:2,curveSegments:12}),bL);c.position.set(x+4.6,36,-.2);c.castShadow=c.receiveShadow=true;g.add(c);
+        {const cp=new T.Mesh(new T.ExtrudeGeometry(new T.Shape(s.getPoints(12)),{depth:.3,bevelEnabled:false}),bL);cp.position.set(x+4.6,36,-.2);g.add(cp)} // fundo fechado, com o mesmo contorno
+        box(w-2*t,.05,6.6,inM,x+4.6,36+y0+.03,3.2,g)}});
    }
    V.m.p514rd=stackMesh(g,-15.5,36.9,3.5,true);V.m.p514rd.userData.base.rot=true;
    V.m.p514hop=stackMesh(g,-5,36.9,3.5,true);V.m.p514hop.userData.base.rot=true;
