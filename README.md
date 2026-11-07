@@ -36,4 +36,4 @@ IBM 29 Card Punch Reference Manual (GA24-3332) e Theory of Operation; IBM 82/83/
 
 ## Teste e produção
 
-O trabalho novo entra na branch `dev` e aparece em `/dev/`, com uma faixa "TEST VERSION". Quando estiver aprovado, `dev` é mesclada na `main` e vai para a raiz do site. Os dois endereços ficam na mesma origem, então recorde e idioma salvos no navegador valem para ambos.
+O trabalho novo entra na branch `dev` e aparece em `/dev/`, com uma faixa "TEST VERSION". Quando estiver aprovado, `dev` é mesclada na `main` e vai para a raiz do site. O `/dev/` pede senha quando o segredo `DEV_PASSWORD` está definido em *Settings ▸ Secrets and variables ▸ Actions*: a página é criptografada (AES, StatiCrypt) no deploy e só abre com a senha. Os dois endereços ficam na mesma origem, então recorde e idioma salvos no navegador valem para ambos.

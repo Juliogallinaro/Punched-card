@@ -32,6 +32,16 @@ jobs:
           ref: dev
           path: dev
       - run: sh prod/tools/build-pages.sh prod dev && test -f _site/dev/index.html
+      - name: Senha no /dev/ (segredo DEV_PASSWORD)
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.DEV_PASSWORD }}
+        run: |
+          if [ -z "$STATICRYPT_PASSWORD" ]; then echo "::warning::DEV_PASSWORD não definido: /dev/ fica sem senha"; exit 0; fi
+          npx --yes staticrypt@3.5.4 _site/dev/index.html -d _site/dev-lock --short -c false --remember 30 \
+            --template-title "Seção de Perfuração · dev" --template-instructions "Versão de teste. Digite a senha." \
+            --template-placeholder "Senha" --template-button "Entrar" --template-remember "Lembrar neste navegador" \
+            --template-error "Senha errada" --template-color-primary "#33617f" --template-color-secondary "#dfe3dc"
+          mv _site/dev-lock/index.html _site/dev/index.html && rm -rf _site/dev-lock
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
