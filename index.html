@@ -1065,10 +1065,11 @@ function init3D(){
       // tampa arredondada ao lado do alimentador
       {const w=4.2,ht=5,r=1.6,t=.32,ri=r-t,L=7,z0=-.2;
         // casca aberta no lado do maço (esquerda): teto arredondado + parede da direita; frente e fundo fechados
-        const s=new T.Shape();s.moveTo(-w/2,ht-r);s.quadraticCurveTo(-w/2,ht,-w/2+r,ht);s.lineTo(w/2-r,ht);s.quadraticCurveTo(w/2,ht,w/2,ht-r);s.lineTo(w/2,0);
-        s.lineTo(w/2-t,0);s.lineTo(w/2-t,ht-t-ri);s.quadraticCurveTo(w/2-t,ht-t,w/2-t-ri,ht-t);s.lineTo(-w/2+r*.7,ht-t);s.quadraticCurveTo(-w/2+t,ht-t,-w/2+t,ht-r);s.lineTo(-w/2,ht-r);
+        const xr=.2; // o teto também é recortado do lado do maço: só a metade da direita cobre
+        const s=new T.Shape();s.moveTo(xr,ht);s.lineTo(w/2-r,ht);s.quadraticCurveTo(w/2,ht,w/2,ht-r);s.lineTo(w/2,0);
+        s.lineTo(w/2-t,0);s.lineTo(w/2-t,ht-t-ri);s.quadraticCurveTo(w/2-t,ht-t,w/2-t-ri,ht-t);s.lineTo(xr,ht-t);s.lineTo(xr,ht);
         const c=new T.Mesh(new T.ExtrudeGeometry(s,{depth:L,bevelEnabled:true,bevelThickness:.1,bevelSize:.1,bevelSegments:2,curveSegments:12}),bL);c.position.set(x+4.6,36,z0);c.castShadow=c.receiveShadow=true;g.add(c);
-        const o=new T.Shape();o.moveTo(-w/2,0);o.lineTo(w/2,0);o.lineTo(w/2,ht-r);o.quadraticCurveTo(w/2,ht,w/2-r,ht);o.lineTo(-w/2+r,ht);o.quadraticCurveTo(-w/2,ht,-w/2,ht-r);o.lineTo(-w/2,0);
+        const o=new T.Shape();o.moveTo(-w/2,0);o.lineTo(w/2,0);o.lineTo(w/2,ht-r);o.quadraticCurveTo(w/2,ht,w/2-r,ht);o.lineTo(xr,ht);o.lineTo(-w/2,ht-r-1.2);o.lineTo(-w/2,0);
         [z0,z0+L-.3].forEach(z=>{const cp=new T.Mesh(new T.ExtrudeGeometry(o,{depth:.3,bevelEnabled:false,curveSegments:12}),bL);cp.position.set(x+4.6,36,z);cp.castShadow=true;g.add(cp)});
         box(w-t,.05,L-.6,inM,x+4.6-t/2,36.03,z0+L/2,g)}});
    }
