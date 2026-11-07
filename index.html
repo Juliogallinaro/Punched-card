@@ -1064,7 +1064,7 @@ function init3D(){
       {const w=4.2,ht=5,r=1.6,t=.32,ri=r-t,L=8.2,z0=-.6; // é o alimentador: o maço fica dentro
         // casca aberta no lado do maço (esquerda): teto arredondado + parede da direita; frente e fundo fechados
         // sem teto: só a parede da direita; frente e fundo inteiros com o contorno arredondado
-        const s=new T.Shape();s.moveTo(w/2-t,0);s.lineTo(w/2,0);s.lineTo(w/2,ht-r);s.lineTo(w/2-t,ht-r);s.lineTo(w/2-t,0);
+        const s=new T.Shape();s.moveTo(w/2-t,0);s.lineTo(w/2,0);s.lineTo(w/2,ht-r);const sm=Math.sqrt(t/r);for(let k=1;k<=6;k++){const u=sm*k/6;s.lineTo(w/2-r*u*u,ht-r*(1-u)*(1-u))}s.lineTo(w/2-t,0); // parede reta até a curva do contorno
         const c=new T.Mesh(new T.ExtrudeGeometry(s,{depth:L,bevelEnabled:true,bevelThickness:.1,bevelSize:.1,bevelSegments:2,curveSegments:12}),bL);c.position.set(x+4.6,36,z0);c.castShadow=c.receiveShadow=true;g.add(c);
         const o=new T.Shape();o.moveTo(-w/2,0);o.lineTo(w/2,0);o.lineTo(w/2,ht-r);o.quadraticCurveTo(w/2,ht,w/2-r,ht);o.lineTo(-w/2+r,ht);o.quadraticCurveTo(-w/2,ht,-w/2,ht-r);o.lineTo(-w/2,0); // frente e fundo inteiros, com o contorno arredondado
         [z0,z0+L-.3].forEach(z=>{const cp=new T.Mesh(new T.ExtrudeGeometry(o,{depth:.3,bevelEnabled:false,curveSegments:12}),bL);cp.position.set(x+4.6,36,z);cp.castShadow=true;g.add(cp)});
