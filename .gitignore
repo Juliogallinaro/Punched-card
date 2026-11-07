@@ -5,3 +5,4 @@ tests/*.json
 cap_*.json
 capen_*.json
 *.out
+_site/

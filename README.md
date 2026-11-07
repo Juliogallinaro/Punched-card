@@ -4,6 +4,7 @@ Simulação 3D, no navegador, de uma seção de perfuração de cartões em 1968
 
 Você perfura pedidos de venda na **IBM 029**, confere as contas na somadora **Olivetti Summa 15**, classifica o maço na **IBM 083**, tabula na **IBM 407** com painel de controle fiado, reproduz saldos na **IBM 514** e fecha o balancete do dia. O comportamento das máquinas segue os manuais da IBM.
 
+- Jogar: https://juliogallinaro.github.io/Punched-card/
 - Arquivo único: `index.html` (Three.js r170 via jsDelivr, módulo ES). Abra no navegador, só desktop.
 - Idiomas: português e inglês (Menu ▸ Idioma · Language).
 - Tutorial completo ou por etapa (029, Summa, 083, 407/514, contabilidade).
@@ -17,6 +18,7 @@ Você perfura pedidos de venda na **IBM 029**, confere as contas na somadora **O
 | `tools/build_en.py` | Monta o dicionário EN e embute em `index.html` |
 | `tools/check-syntax.js` | Confere a sintaxe do script |
 | `tests/` | Testes Playwright headless |
+| `tools/build-pages.sh`, `.github/workflows/pages.yml` | Publica no GitHub Pages a cada push na `main` |
 
 ## Testes
 
