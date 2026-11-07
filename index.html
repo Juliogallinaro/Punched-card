@@ -1027,12 +1027,13 @@ function init3D(){
    // bloco de cima à esquerda com a unidade de luzes, e as duas aberturas dos empilhadores à direita
    box(22,12,22,bL,-11,29.6,1.5,g);
    box(22,12,9,bL,11,29.6,-7,g);
-   [[3,'r'],[13.5,'p']].forEach(([x])=>{box(6.4,11,.4,inM,x+2.9,29,2.6,g);box(6.4,.4,10,inM,x+2.9,23.8,7.5,g)});
-   [0.2,9.8,20.2].forEach(x=>box(3.6,12,13,bL,x+1.6,29.6,6.1,g));
+   // empilhadores: nichos estreitos, da largura de um cartão (3¼ pol.), com a testeira por cima
+   [6.1,16.5].forEach(x=>{box(4.4,8,.4,inM,x,27.6,2.6,g);box(4.4,.4,10,inM,x,23.8,7.5,g);box(4.4,4.2,13,bL,x,33.5,6.1,g)});
+   [[1.95,3.9],[11.3,6],[20.35,3.3]].forEach(([x,w])=>box(w,12,13,bL,x,29.6,6.1,g));
    V.m.p514ro=stackMesh(g,6.1,24.0,7.5,true);V.m.p514ro.userData.base.rot=true;
    V.m.p514stk=stackMesh(g,16.5,24.0,7.5,true);V.m.p514stk.userData.base.rot=true;
-   {const hr=new T.Mesh(new T.BoxGeometry(6,11,10),new T.MeshBasicMaterial({visible:false}));hr.position.set(6.1,29,7.5);hr.userData.onClick=()=>{takeFrom('514r')};g.add(hr);V.click.push(hr);
-    const hp=new T.Mesh(new T.BoxGeometry(6,11,10),new T.MeshBasicMaterial({visible:false}));hp.position.set(16.5,29,7.5);hp.userData.onClick=()=>{takeFrom('514')};g.add(hp);V.click.push(hp)}
+   {const hr=new T.Mesh(new T.BoxGeometry(4.4,8,10),new T.MeshBasicMaterial({visible:false}));hr.position.set(6.1,27.6,7.5);hr.userData.onClick=()=>{takeFrom('514r')};g.add(hr);V.click.push(hr);
+    const hp=new T.Mesh(new T.BoxGeometry(4.4,8,10),new T.MeshBasicMaterial({visible:false}));hp.position.set(16.5,27.6,7.5);hp.userData.onClick=()=>{takeFrom('514')};g.add(hp);V.click.push(hp)}
    // unidade de luzes e teclas (signal light unit)
    box(9,1,1,mat('#c9ccc6',.35,.4),-4.8,35.1,12.4,g);
    V.m514L={};[['pw','#e04a3a'],['run','#e8b49a'],['feed','#d8584a'],['cmp','#9aa0a2']].forEach(([k,c],i)=>{const m=new T.Mesh(new T.BoxGeometry(.8,.5,.3),new T.MeshStandardMaterial({color:c,emissive:'#000'}));m.position.set(-8.6+i*.95,35.15,12.95);g.add(m);V.m514L[k]=m});
@@ -1044,9 +1045,10 @@ function init3D(){
    // alto: alimentadores de leitura e de perfuração com as guias altas, e a tampa de trás
    box(44,7,10,bL,0,39,-7.5,g);box(22,1,4,bL,11,42.9,-4.5,g);box(21,6,3,bM,11,38.6,-1,g);
    box(19,.6,8,inM,-11,35.9,4,g);
-   [[-15.5,'r'],[-5,'p']].forEach(([x,k])=>{box(8,1,8,mat('#9aa0a2',.4,.4),x,36.3,3.5,g);
-     [[-3.2,-2],[-2.4,-2],[3.2,-2]].forEach(([dx,dz])=>{const s=box(.25,7,1.6,mat('#c9ccc6',.3,.5),x+dx,40,3.5+dz,g);s.rotation.z=dx<0?.08:-.08});
-     box(4.6,5,4.2,bL,x+5.6,38.6,1.8,g)});
+   // alimentadores do tamanho de um cartão (3¼ × 7⅜ pol.), com as guias altas e a tampa arredondada ao lado
+   [[-15.5,'r'],[-5,'p']].forEach(([x,k])=>{box(4,1,8,mat('#9aa0a2',.4,.4),x,36.3,3.5,g);
+     [[-2,-2.6],[-1.95,1.6],[2,-2.6]].forEach(([dx,dz])=>{const s=box(.22,6,1.1,mat('#c9ccc6',.3,.5),x+dx,39.6,3.5+dz,g);s.rotation.z=dx<0?.06:-.06});
+     box(4.2,4.6,6,bL,x+4.4,38.4,3,g)});
    V.m.p514rd=stackMesh(g,-15.5,36.9,3.5,true);V.m.p514rd.userData.base.rot=true;
    V.m.p514hop=stackMesh(g,-5,36.9,3.5,true);V.m.p514hop.userData.base.rot=true;
    {const hr=new T.Mesh(new T.BoxGeometry(7,8,8),new T.MeshBasicMaterial({visible:false}));hr.position.set(-15.5,40,3.5);hr.userData.onClick=()=>{if(HAND.length)handTo('514r');else takeFrom('514rh')};g.add(hr);V.click.push(hr);
