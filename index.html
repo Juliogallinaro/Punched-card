@@ -1542,7 +1542,9 @@ function renderMachine(){
       const lz=f&&f.lz&&M.col===f.s?`<span class="lzreg" title="Registro de zeros à esquerda">${esc(M.lz.padStart(f.lz,'·'))}</span><span>zero à esquerda, ${f.lz} col. · LEFT ZERO (End) perfura</span>`:'';
       info=`<span class="tag">COL ${pad(M.col+1,2)}</span><span class="fld">Campo <b>${esc(lay.n||'(livre)')}</b> · ${esc(lay.h||'')}${f?` · programa: col. ${f.s+1}–${f.e+1}${f.dup?' · duplica':''}${f.skip?' · pula':''}`:' · programa desligado'}</span><span class="tag">${sh==='A'?'ALFABÉTICO':'NUMÉRICO'}</span>${M.mult?'<span class="tag calc">MULT PCH</span>':''}${lz}`}
     st.innerHTML=`<span class="tag">${M.card?PROGS[M.card.prog].name:'—'}</span><span class="tag">PROG ${M.lvl===1?'ONE':'TWO'}</span>${M.lock?'<span class="tag calc">TECLADO TRAVADO</span>':''}${info}`}
-  $('#pausebox').hidden=!(S.phase==='sales'&&S.paused&&$('#ov').hidden);
+  // jogo pausado sem nenhuma janela aberta: em vez da tela PAUSADO (sem saída), abre o Menu, que tem "Continuar o jogo"
+  $('#pausebox').hidden=true;
+  if(S.phase==='sales'&&S.paused&&$('#ov').hidden&&!TITLE.on&&!AUTO.on&&!V.editing&&!S.menuPending){S.menuPending=true;setTimeout(()=>{S.menuPending=false;if(S.phase==='sales'&&S.paused&&$('#ov').hidden&&!TITLE.on&&!AUTO.on&&!V.editing)openMenu()},0)}
 }
 function render(){renderMachine()}
 function renderInfo(){const d=dayDate(S.day);
