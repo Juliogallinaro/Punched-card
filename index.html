@@ -154,8 +154,16 @@ table.mt th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:v
 <div class="tela" id="title" hidden></div>
 <div class="tap" id="tap" hidden><i></i><span></span></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>
+<script type="module">
+// Three.js r170 (módulo ES). O jogo roda como script clássico depois que o THREE está pronto.
+const run=()=>{const s=document.createElement('script');s.textContent=document.getElementById('jogo').textContent;document.body.appendChild(s)};
+import('https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js').then(T0=>{
+  const T={...T0};
+  // texturas desenhadas em canvas estão em sRGB
+  T.CanvasTexture=class extends T0.CanvasTexture{constructor(...a){super(...a);this.colorSpace=T0.SRGBColorSpace}};
+  window.THREE=T}).catch(e=>console.warn('Three.js não carregou',e)).finally(run);
+</script>
+<script type="text/plain" id="jogo">
 const $=s=>document.querySelector(s);
 const rnd=n=>Math.floor(Math.random()*n);
 const pick=a=>a[rnd(a.length)];
@@ -540,8 +548,8 @@ function init3D(){
   V.aniso=R.capabilities.getMaxAnisotropy();
   const scene=new T.Scene();scene.background=new T.Color('#a9b7b0');
   const cam=new T.PerspectiveCamera(38,2,0.1,700);
-  scene.add(new T.HemisphereLight('#f6f2e6','#4d5a53',0.62));
-  const sun=new T.DirectionalLight('#fff4e0',0.55);sun.position.set(12,34,24);sun.target.position.set(0,4,-4);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);
+  scene.add(new T.HemisphereLight('#f6f2e6','#4d5a53',0.62*Math.PI));
+  const sun=new T.DirectionalLight('#fff4e0',0.55*Math.PI);sun.position.set(12,34,24);sun.target.position.set(0,4,-4);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);
   Object.assign(sun.shadow.camera,{left:-42,right:42,top:34,bottom:-30,near:5,far:110});sun.shadow.bias=-0.0006;scene.add(sun,sun.target);
   const mat=(c,r=.7,m=.05)=>new T.MeshStandardMaterial({color:c,roughness:r,metalness:m});
   const box=(w,h,d,m,x,y,z,parent=scene)=>{const b=new T.Mesh(new T.BoxGeometry(w,h,d),m);b.position.set(x,y,z);b.castShadow=b.receiveShadow=true;parent.add(b);return b};
@@ -659,7 +667,7 @@ function init3D(){
   windowAt(backWin,-37,22,18,24);windowAt(backWin,43,24,18,24);
   const sideWin=new T.Group();sideWin.position.set(-61.9,0,0);sideWin.rotation.y=Math.PI/2;scene.add(sideWin);
   windowAt(sideWin,-8,20,22,26,.5);windowAt(sideWin,-38,20,22,26,.5);
-  const winLight=new T.DirectionalLight('#eef4ff',.28);winLight.position.set(-60,30,10);winLight.target.position.set(0,0,0);scene.add(winLight,winLight.target);
+  const winLight=new T.DirectionalLight('#eef4ff',.28*Math.PI);winLight.position.set(-60,30,10);winLight.target.position.set(0,0,0);scene.add(winLight,winLight.target);
   // mesa do 029: pés cromados e gabinete escuro embaixo
   const chromeM=mat('#c9cdcf',.25,.85),cabM=mat('#555b58',.65,.1);
   [[-27,-6.8],[27,-6.8],[-27,5],[27,5]].forEach(([x,z])=>{const l=new T.Mesh(new T.CylinderGeometry(.55,.55,29,14),chromeM);l.position.set(x,FLOOR+14.5,z);l.castShadow=true;scene.add(l)});
@@ -918,7 +926,7 @@ function init3D(){
    box(X1-X0,4,.6,mat('#4d5a53',.7),MC,FLOOR+2,-16.9);box(.6,4,90,mat('#4d5a53',.7),X1-.3,FLOOR+2,DZ);box(X1-62,1.2,.6,mat('#7d8c84'),(62+X1)/2,9.5,-16.9);
    windowAt(backWin,105,30,18,22);windowAt(backWin,166,30,18,22);
    const rWin=new T.Group();rWin.position.set(X1-.1,0,0);rWin.rotation.y=-Math.PI/2;scene.add(rWin);windowAt(rWin,-2,22,22,26,.25);windowAt(rWin,-38,22,22,26,.25);
-   const ml=new T.DirectionalLight('#fff6e8',.3);ml.position.set(200,60,70);ml.target.position.set(180,0,0);scene.add(ml,ml.target);
+   const ml=new T.DirectionalLight('#fff6e8',.3*Math.PI);ml.position.set(200,60,70);ml.target.position.set(180,0,0);scene.add(ml,ml.target);
    // divisória: rodapé de alvenaria, vidro com caixilhos e bandeira
    const dZ0=-17.2,dZ1=36,dL=dZ1-dZ0,dC=(dZ0+dZ1)/2,frM=mat('#55605b',.5,.4);
    box(1.2,22,dL,mat('#9aa69f',.85),X0,FLOOR+11,dC);box(1.6,.8,dL+.4,frM,X0,FLOOR+22.4,dC);

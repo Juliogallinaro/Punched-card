@@ -2,7 +2,7 @@ const {chromium}=require('playwright');const fs=require('fs');const mode=process
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1100,height:700}});
 const errs=[];p.on('pageerror',e=>errs.push(e.message));
 await p.addInitScript(()=>{window.__cap=true});
-await p.route('**/three.min.js',r=>r.fulfill({body:fs.readFileSync(require.resolve('three/build/three.min.js'),'utf8'),contentType:'application/javascript'}));
+await p.route('**/three.module.min.js',r=>r.fulfill({body:require('fs').readFileSync(require('path').join(__dirname,'..','node_modules','three','build','three.module.min.js'),'utf8'),contentType:'application/javascript',headers:{'access-control-allow-origin':'*'}}));
 await p.setContent('<!doctype html><html><head><meta charset="utf-8"></head><body>'+fs.readFileSync(require('path').join(__dirname,'..','index.html'),'utf8')+'</body></html>');
 await p.waitForTimeout(800);await p.evaluate(()=>{window.__cap=true;LANG='en';V.R.render=()=>{};trNode(document.body);renderAll();renderMachines()});
 const save=async()=>fs.writeFileSync('capen_'+mode+(process.argv[3]||'')+'.json',JSON.stringify(await p.evaluate(()=>[...TRCAP])));

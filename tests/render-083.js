@@ -1,7 +1,7 @@
 const {chromium}=require('playwright');
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1100,height:720}});
 const errs=[];p.on('pageerror',e=>errs.push(e.message));
-await p.route('**/three.min.js',r=>r.fulfill({body:require('fs').readFileSync(require.resolve('three/build/three.min.js'),'utf8'),contentType:'application/javascript'}));
+await p.route('**/three.module.min.js',r=>r.fulfill({body:require('fs').readFileSync(require('path').join(__dirname,'..','node_modules','three','build','three.module.min.js'),'utf8'),contentType:'application/javascript',headers:{'access-control-allow-origin':'*'}}));
 await p.setContent('<!doctype html><html><head><meta charset="utf-8"></head><body>'+require('fs').readFileSync(require('path').join(__dirname,'..','index.html'),'utf8')+'</body></html>');
 await p.click('[data-ti="start"]');
 await p.evaluate(()=>{for(let i=0;i<40;i++)SRT.hopper.push(newCard(1));SRT.edit=true;SRT.sup=1<<5;SRT.col=15;renderMachines();setView('classificadora');V.camPos.copy(viewTarget().pos);V.camTgt.copy(viewTarget().tgt)});

@@ -4,7 +4,7 @@ Simulação 3D, no navegador, de uma seção de perfuração de cartões em 1968
 
 Você perfura pedidos de venda na **IBM 029**, confere as contas na somadora **Olivetti Summa 15**, classifica o maço na **IBM 083**, tabula na **IBM 407** com painel de controle fiado, reproduz saldos na **IBM 514** e fecha o balancete do dia. O comportamento das máquinas segue os manuais da IBM.
 
-- Arquivo único: `index.html` (Three.js r128 via cdnjs). Abra no navegador, só desktop.
+- Arquivo único: `index.html` (Three.js r170 via jsDelivr, módulo ES). Abra no navegador, só desktop.
 - Idiomas: português e inglês (Menu ▸ Idioma · Language).
 - Tutorial completo ou por etapa (029, Summa, 083, 407/514, contabilidade).
 
@@ -21,7 +21,7 @@ Você perfura pedidos de venda na **IBM 029**, confere as contas na somadora **O
 ## Testes
 
 ```bash
-npm install
+npm install                         # playwright e three 0.170.0
 npm run check                       # sintaxe
 npm test                            # tutorial completo; deve terminar com "Todas as contas conferem."
 node tests/tutorial-etapa.js 083    # uma etapa: 029, summa, 083, 407, acct
