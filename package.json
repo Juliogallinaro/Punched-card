@@ -6,7 +6,8 @@
     "check": "node tools/check-syntax.js",
     "test": "node tests/tutorial-completo.js",
     "test:etapa": "node tests/tutorial-etapa.js",
-    "i18n": "python3 tools/build_en.py"
+    "i18n": "python3 tools/build_en.py",
+    "export:glb": "node tools/export-glb.js"
   },
   "devDependencies": {
     "playwright": "^1.40.0",
