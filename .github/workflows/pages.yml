@@ -1,8 +1,10 @@
 name: GitHub Pages
 
+# main → produção (raiz do site); dev → teste (/teste/).
+# O Pages tem um site só por repositório, então cada deploy monta as duas versões juntas.
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
   workflow_dispatch:
 
 permissions:
@@ -22,7 +24,15 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - run: sh tools/build-pages.sh
+        with:
+          ref: main
+          path: prod
+      - name: Checkout dev (se existir)
+        run: |
+          if git ls-remote --exit-code --heads "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" dev >/dev/null; then
+            git clone --depth 1 --branch dev "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" dev
+          fi
+      - run: sh prod/tools/build-pages.sh prod dev
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
