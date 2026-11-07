@@ -23,11 +23,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: main
           path: prod
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: dev
           path: dev
@@ -42,9 +42,9 @@ jobs:
             --template-placeholder "Senha" --template-button "Entrar" --template-remember "Lembrar neste navegador" \
             --template-error "Senha errada" --template-color-primary "#33617f" --template-color-secondary "#dfe3dc"
           mv _site/dev-lock/index.html _site/dev/index.html && rm -rf _site/dev-lock
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
