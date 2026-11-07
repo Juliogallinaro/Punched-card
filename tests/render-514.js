@@ -6,6 +6,6 @@ await p.setContent('<!doctype html><html><head><meta charset="utf-8"></head><bod
 await p.click('[data-ti="start"]');
 await p.evaluate(()=>{for(let i=0;i<30;i++){P514.read.push(newCard(1));P514.stacker.push(newCard(1));P514.readOut.push(newCard(1))}for(let i=0;i<40;i++)SRT.hopper.push(newCard(1));renderMachines();setView('514');V.camPos.copy(viewTarget().pos);V.camTgt.copy(viewTarget().tgt)});
 await p.waitForTimeout(1500);await p.locator('#stage').screenshot({path:'v514.png'});
-await p.evaluate(()=>{V.view='x';viewTarget=()=>({tgt:new THREE.Vector3(123,13,-1),pos:new THREE.Vector3(140,24,16)});V.camPos.copy(viewTarget().pos);V.camTgt.copy(viewTarget().tgt)});
+await p.evaluate(()=>{V.view='x';viewTarget=()=>({tgt:new THREE.Vector3(160,8,0),pos:new THREE.Vector3(150,26,34)});V.camPos.copy(viewTarget().pos);V.camTgt.copy(viewTarget().tgt)});
 await p.waitForTimeout(1500);await p.locator('#stage').screenshot({path:'vhop.png'});
 console.log(errs);await b.close()})();

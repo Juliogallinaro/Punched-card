@@ -1045,13 +1045,27 @@ function init3D(){
      m.userData.onClick=()=>{if(k==='start')start514();else{P514.run=false;clearTimeout(P514.timer);renderMachines()}tone('click')};V.m514K=V.m514K||{};V.m514K[k]=m});
    // chave geral na lateral
    {const sw=box(.4,1.6,.8,dk,-23.4,30,8,g);sw.userData.onClick=()=>{P514.on=!P514.on;tone('click');msg(`514: chave geral ${P514.on?'ligada':'desligada'}.`);renderMachines()};V.click.push(sw);V.m514Sw=sw}
-   // alto: alimentadores de leitura e de perfuração com as guias altas, e a tampa de trás
-   box(44,7,10,bL,0,39,-7.5,g);box(22,1,4,bL,11,42.9,-4.5,g);box(21,6,3,bM,11,38.6,-1,g);
-   box(19,.6,8,inM,-11,35.9,4,g);
-   // alimentadores do tamanho de um cartão (3¼ × 7⅜ pol.), com as guias altas e a tampa arredondada ao lado
-   [[-15.5,'r'],[-5,'p']].forEach(([x,k])=>{box(4,1,8,mat('#9aa0a2',.4,.4),x,36.3,3.5,g);
-     [[-2,-2.6],[-1.95,1.6],[2,-2.6]].forEach(([dx,dz])=>{const s=box(.22,6,1.1,mat('#c9ccc6',.3,.5),x+dx,39.6,3.5+dz,g);s.rotation.z=dx<0?.06:-.06});
-     box(4.2,4.6,6,bL,x+4.4,38.4,3,g)});
+   // alto, como na figura: carenagem comprida atrás com a quina arredondada, poço claro dos alimentadores,
+   // guias altas em ponta, tampas arredondadas ao lado de cada alimentador e o capô da unidade de perfuração à direita
+   {const ex=(s,w,x,m)=>{const e=new T.Mesh(new T.ExtrudeGeometry(s,{depth:w,bevelEnabled:true,bevelThickness:.1,bevelSize:.1,bevelSegments:2,curveSegments:16}),m);e.rotation.y=-Math.PI/2;e.position.set(x+w/2,0,0);e.castShadow=e.receiveShadow=true;g.add(e);return e};
+    const side=(z0,z1,y0,y1,R)=>{const s=new T.Shape();s.moveTo(z0,y0);s.lineTo(z1,y0);s.lineTo(z1,y1-R);s.quadraticCurveTo(z1,y1,z1-R,y1);s.lineTo(z0+R*.5,y1);s.quadraticCurveTo(z0,y1,z0,y1-R*.5);s.lineTo(z0,y0);return s};
+    const wellM=mat('#e6e7e1',.6,.05),finM=mat('#d9dbd5',.35,.35);
+    ex(side(-12.5,-4.2,35.6,42.4,2.6),22.6,-22.6,bL);                  // carenagem de trás, sobre o poço
+    box(22,6.6,.3,wellM,-11.2,38.9,-4.05,g);                            // fundo claro do poço
+    box(22,.4,12.3,wellM,-11.2,35.8,2.1,g);                             // piso do poço
+    box(.6,4,12.3,bL,-22.3,37.6,2.1,g);                                 // borda esquerda
+    ex(side(-12.5,5.6,35.6,44.4,3.4),20.4,1.8,bL);                       // capô da unidade de perfuração
+    {const hd=box(6.5,.5,.5,trimM,11.2,40.6,5.75,g);box(2.2,.9,.6,trimM,11.2,40.6,5.8,g)} // puxador cromado
+    box(4.2,1,2.2,dk,6.4,44.9,-1.2,g);box(4.6,.2,2.4,mat("#c9ccc6",.35,.4),10.8,44.5,-1.2,g); // peso escuro e placa no alto
+    [[-15.5,'r'],[-5,'p']].forEach(([x,k])=>{
+      box(4,.5,8,mat('#9aa0a2',.4,.4),x,36.2,3.5,g);                   // bandeja do tamanho do cartão
+      // guias em ponta: duas à esquerda, uma à direita
+      [[-2.15,0.4,7.4],[-2.15,-2.6,6.2],[2.15,-2.6,5.6]].forEach(([dx,dz,ht])=>{const s=new T.Shape();s.moveTo(-1,0);s.lineTo(1,0);s.lineTo(.15,ht);s.lineTo(-.15,ht);s.lineTo(-1,0);
+        const f=new T.Mesh(new T.ExtrudeGeometry(s,{depth:.18,bevelEnabled:false}),finM);f.rotation.y=-Math.PI/2;f.position.set(x+dx+.09,36.4,3.5+dz);f.castShadow=true;g.add(f)});
+      // tampa arredondada ao lado do alimentador
+      {const s=new T.Shape(),w=4.2,ht=5,r=1.6;s.moveTo(-w/2,0);s.lineTo(w/2,0);s.lineTo(w/2,ht-r);s.quadraticCurveTo(w/2,ht,w/2-r,ht);s.lineTo(-w/2+r,ht);s.quadraticCurveTo(-w/2,ht,-w/2,ht-r);s.lineTo(-w/2,0);
+        const c=new T.Mesh(new T.ExtrudeGeometry(s,{depth:7,bevelEnabled:true,bevelThickness:.15,bevelSize:.15,bevelSegments:2,curveSegments:12}),bL);c.position.set(x+4.6,36,-.2);c.castShadow=c.receiveShadow=true;g.add(c)}});
+   }
    V.m.p514rd=stackMesh(g,-15.5,36.9,3.5,true);V.m.p514rd.userData.base.rot=true;
    V.m.p514hop=stackMesh(g,-5,36.9,3.5,true);V.m.p514hop.userData.base.rot=true;
    {const hr=new T.Mesh(new T.BoxGeometry(7,8,8),new T.MeshBasicMaterial({visible:false}));hr.position.set(-15.5,40,3.5);hr.userData.onClick=()=>{if(HAND.length)handTo('514r');else takeFrom('514rh')};g.add(hr);V.click.push(hr);
