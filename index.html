@@ -1047,14 +1047,14 @@ function init3D(){
    {const sw=box(.4,1.6,.8,dk,-23.4,30,8,g);sw.userData.onClick=()=>{P514.on=!P514.on;tone('click');msg(`514: chave geral ${P514.on?'ligada':'desligada'}.`);renderMachines()};V.click.push(sw);V.m514Sw=sw}
    // alto, como na figura: carenagem comprida atrás com a quina arredondada, poço claro dos alimentadores,
    // guias altas em ponta, tampas arredondadas ao lado de cada alimentador e o capô da unidade de perfuração à direita
-   {const ex=(s,w,x,m)=>{const e=new T.Mesh(new T.ExtrudeGeometry(s,{depth:w,bevelEnabled:true,bevelThickness:.1,bevelSize:.1,bevelSegments:2,curveSegments:16}),m);e.rotation.y=-Math.PI/2;e.position.set(x+w/2,0,0);e.castShadow=e.receiveShadow=true;g.add(e);return e};
+   {const ex=(s,w,x,m)=>{const e=new T.Mesh(new T.ExtrudeGeometry(s,{depth:w,bevelEnabled:true,bevelThickness:.1,bevelSize:.1,bevelSegments:2,curveSegments:16}),m);e.rotation.y=-Math.PI/2;e.position.set(x+w,0,0);e.castShadow=e.receiveShadow=true;g.add(e);return e};
     const side=(z0,z1,y0,y1,R)=>{const s=new T.Shape();s.moveTo(z0,y0);s.lineTo(z1,y0);s.lineTo(z1,y1-R);s.quadraticCurveTo(z1,y1,z1-R,y1);s.lineTo(z0+R*.5,y1);s.quadraticCurveTo(z0,y1,z0,y1-R*.5);s.lineTo(z0,y0);return s};
     const wellM=mat('#e6e7e1',.6,.05),finM=mat('#d9dbd5',.35,.35);
     ex(side(-12.5,-4.2,35.6,42.4,2.6),22.6,-22.6,bL);                  // carenagem de trás, sobre o poço
     box(22,6.6,.3,wellM,-11.2,38.9,-4.05,g);                            // fundo claro do poço
     box(27,.4,12.3,wellM,-8.7,35.8,2.1,g);box(5,6.6,.3,wellM,2.3,38.9,-4.05,g);box(5,6.8,8.3,bL,2.3,39,-8.3,g);                             // piso do poço
     box(.6,4,12.3,bL,-22.3,37.6,2.1,g);                                 // borda esquerda
-    ex(side(-12.5,5.6,35.6,44.4,3.4),17.4,4.8,bL);                       // capô da unidade de perfuração
+    ex(side(-12.5,5.6,35.6,44.4,3.4),17.22,4.8,bL);  // face direita alinhada com a divisória de baixo (x 22,12)                       // capô da unidade de perfuração
     {const hd=box(6.5,.5,.5,trimM,13.5,40.6,5.75,g);box(2.2,.9,.6,trimM,13.5,40.6,5.8,g)} // puxador cromado
     box(4.2,1,2.2,dk,9,44.9,-1.2,g);box(4.6,.2,2.4,mat("#c9ccc6",.35,.4),13.4,44.5,-1.2,g); // peso escuro e placa no alto
     [[-15.5,'r'],[-5,'p']].forEach(([x,k])=>{
