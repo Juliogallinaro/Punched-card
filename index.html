@@ -1052,8 +1052,8 @@ function init3D(){
     const wellM=mat('#e6e7e1',.6,.05),finM=mat('#d9dbd5',.35,.35);
     ex(side(-12.5,-4.2,35.6,42.4,2.6),22.6,-22.6,bL);                  // carenagem de trás, sobre o poço
     box(19,.4,12.3,wellM,-12.7,35.8,2.1,g);                             // piso do poço
-    ex(side(-12.5,5.6,35.6,44.4,3.4),25.22,-3.2,bL);  // da tampa do alimentador de perfuração (x −3,2) até a face da divisória de baixo (x 22,12)                       // capô da unidade de perfuração
-    {const hd=box(6.5,.5,.5,trimM,11,40.6,5.75,g);box(2.2,.9,.6,trimM,11,40.6,5.8,g)} // puxador cromado
+    ex(side(-12.5,7.6,35.6,44.4,3.4),25.22,-3.2,bL);  // da tampa do alimentador de perfuração (x −3,2) até a face da divisória de baixo (x 22,12); frente alinhada com a do alimentador (z 7,6)                       // capô da unidade de perfuração
+    {const hd=box(6.5,.5,.5,trimM,11,40.6,7.75,g);box(2.2,.9,.6,trimM,11,40.6,7.8,g)} // puxador cromado
     box(4.2,1,2.2,dk,4.5,44.9,-1.2,g);box(4.6,.2,2.4,mat("#c9ccc6",.35,.4),8.9,44.5,-1.2,g); // peso escuro e placa no alto
     [[-20.5,'r'],[-10,'p']].forEach(([x,k])=>{
       // guias em ponta, iguais, encostadas no lado esquerdo do maço (na boca do alimentador)
