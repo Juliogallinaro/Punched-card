@@ -1,6 +1,6 @@
 name: GitHub Pages
 
-# main → produção (raiz do site); dev → test (/test/).
+# main → produção (raiz do site); dev → /dev/.
 # O Pages tem um site só por repositório, então cada deploy monta as duas versões juntas.
 on:
   push:
@@ -31,7 +31,7 @@ jobs:
         with:
           ref: dev
           path: dev
-      - run: sh prod/tools/build-pages.sh prod dev && test -f _site/test/index.html
+      - run: sh prod/tools/build-pages.sh prod dev && test -f _site/dev/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

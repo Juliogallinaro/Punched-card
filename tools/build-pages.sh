@@ -1,7 +1,7 @@
 #!/bin/sh
 # Monta o site do GitHub Pages:
 #   _site/index.html       ← produção (branch main)
-#   _site/test/index.html ← teste (branch dev), com faixa "TEST VERSION"
+#   _site/dev/index.html ← teste (branch dev), com faixa "TEST VERSION"
 # Uso: sh tools/build-pages.sh <pasta da main> [pasta da dev]
 set -e
 PROD=${1:-.}; DEV=$2
@@ -18,6 +18,6 @@ wrap() { # $1 = fragmento index.html, $2 = saída, $3 = "teste" para a faixa
 }
 rm -rf _site; mkdir -p _site
 wrap "$PROD/index.html" _site/index.html
-if [ -n "$DEV" ] && [ -f "$DEV/index.html" ]; then wrap "$DEV/index.html" _site/test/index.html teste; fi
+if [ -n "$DEV" ] && [ -f "$DEV/index.html" ]; then wrap "$DEV/index.html" _site/dev/index.html teste; fi
 touch _site/.nojekyll
 echo "site gerado:"; find _site -name index.html
