@@ -1052,15 +1052,15 @@ function init3D(){
     const wellM=mat('#e6e7e1',.6,.05),finM=mat('#d9dbd5',.35,.35);
     ex(side(-12.5,-4.2,35.6,42.4,2.6),22.6,-22.6,bL);                  // carenagem de trás, sobre o poço
     box(22,6.6,.3,wellM,-11.2,38.9,-4.05,g);                            // fundo claro do poço
-    box(22,.4,12.3,wellM,-11.2,35.8,2.1,g);                             // piso do poço
+    box(27,.4,12.3,wellM,-8.7,35.8,2.1,g);box(5,6.6,.3,wellM,2.3,38.9,-4.05,g);box(5,6.8,8.3,bL,2.3,39,-8.3,g);                             // piso do poço
     box(.6,4,12.3,bL,-22.3,37.6,2.1,g);                                 // borda esquerda
-    ex(side(-12.5,5.6,35.6,44.4,3.4),20.4,1.8,bL);                       // capô da unidade de perfuração
-    {const hd=box(6.5,.5,.5,trimM,11.2,40.6,5.75,g);box(2.2,.9,.6,trimM,11.2,40.6,5.8,g)} // puxador cromado
-    box(4.2,1,2.2,dk,6.4,44.9,-1.2,g);box(4.6,.2,2.4,mat("#c9ccc6",.35,.4),10.8,44.5,-1.2,g); // peso escuro e placa no alto
+    ex(side(-12.5,5.6,35.6,44.4,3.4),17.4,4.8,bL);                       // capô da unidade de perfuração
+    {const hd=box(6.5,.5,.5,trimM,13.5,40.6,5.75,g);box(2.2,.9,.6,trimM,13.5,40.6,5.8,g)} // puxador cromado
+    box(4.2,1,2.2,dk,9,44.9,-1.2,g);box(4.6,.2,2.4,mat("#c9ccc6",.35,.4),13.4,44.5,-1.2,g); // peso escuro e placa no alto
     [[-15.5,'r'],[-5,'p']].forEach(([x,k])=>{
       box(4,.5,8,mat('#9aa0a2',.4,.4),x,36.2,3.5,g);                   // bandeja do tamanho do cartão
-      // guias em ponta: duas à esquerda, uma à direita
-      [[-2.15,0.4,7.4],[-2.15,-2.6,6.2],[2.15,-2.6,5.6]].forEach(([dx,dz,ht])=>{const s=new T.Shape();s.moveTo(-1,0);s.lineTo(1,0);s.lineTo(.15,ht);s.lineTo(-.15,ht);s.lineTo(-1,0);
+      // guias em ponta, iguais, do lado esquerdo do maço
+      [[-2.15,0.4,7],[-2.15,-2.6,7]].forEach(([dx,dz,ht])=>{const s=new T.Shape();s.moveTo(-1,0);s.lineTo(1,0);s.lineTo(.15,ht);s.lineTo(-.15,ht);s.lineTo(-1,0);
         const f=new T.Mesh(new T.ExtrudeGeometry(s,{depth:.18,bevelEnabled:false}),finM);f.rotation.y=-Math.PI/2;f.position.set(x+dx+.09,36.4,3.5+dz);f.castShadow=true;g.add(f)});
       // tampa arredondada ao lado do alimentador
       {const s=new T.Shape(),w=4.2,ht=5,r=1.6;s.moveTo(-w/2,0);s.lineTo(w/2,0);s.lineTo(w/2,ht-r);s.quadraticCurveTo(w/2,ht,w/2-r,ht);s.lineTo(-w/2+r,ht);s.quadraticCurveTo(-w/2,ht,-w/2,ht-r);s.lineTo(-w/2,0);
