@@ -1,6 +1,6 @@
 name: GitHub Pages
 
-# main → produção (raiz do site); dev → teste (/teste/).
+# main → produção (raiz do site); dev → test (/test/).
 # O Pages tem um site só por repositório, então cada deploy monta as duas versões juntas.
 on:
   push:
