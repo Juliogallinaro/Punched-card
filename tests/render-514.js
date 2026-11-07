@@ -2,7 +2,7 @@ const {chromium}=require('playwright');
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1100,height:720}});
 const errs=[];p.on('pageerror',e=>errs.push(e.message));
 await p.route('**/three.module.min.js',r=>r.fulfill({body:require('fs').readFileSync(require('path').join(__dirname,'..','node_modules','three','build','three.module.min.js'),'utf8'),contentType:'application/javascript',headers:{'access-control-allow-origin':'*'}}));
-await p.setContent('<!doctype html><html><head><meta charset="utf-8"></head><body>'+require('fs').readFileSync(require('path').join(__dirname,'..','index.html'),'utf8')+'</body></html>');
+await p.setContent('<!doctype html><html><head><meta charset="utf-8"></head><body>'+require('fs').readFileSync(require('path').join(__dirname,'..','index.html'),'utf8')+'</body></html>');await p.waitForFunction(()=>typeof V!=='undefined'&&V.R,null,{timeout:30000});
 await p.click('[data-ti="start"]');
 await p.evaluate(()=>{for(let i=0;i<30;i++){P514.read.push(newCard(1));P514.stacker.push(newCard(1));P514.readOut.push(newCard(1))}for(let i=0;i<40;i++)SRT.hopper.push(newCard(1));renderMachines();setView('514');V.camPos.copy(viewTarget().pos);V.camTgt.copy(viewTarget().tgt)});
 await p.waitForTimeout(1500);await p.locator('#stage').screenshot({path:'v514.png'});

@@ -1154,6 +1154,7 @@ function viewTarget(raw){const T=THREE;let r;
     case 'sala':r={tgt:new T.Vector3(-4,6,4),off:new T.Vector3(46,38,84)};break;
     case 'maquinas':r={tgt:new T.Vector3(184,-4,12),off:new T.Vector3(-6,78,232)};break;
     case 'classificadora':r={tgt:new T.Vector3(100,2,0),off:new T.Vector3(0,14,56)};break;
+    case 'srtcomando':r={tgt:new T.Vector3(124.8,13.4,-3.4),off:new T.Vector3(-7,15,15)};break; // 083 de perto: alimentador, seletor de colunas e teclas
     case 'tabuladora':case '407':r={tgt:new T.Vector3(240,16,4),off:new T.Vector3(-6,32,72)};break;
     case '514':r={tgt:new T.Vector3(160,-2,6),off:new T.Vector3(4,22,56)};break;
     case 'painel407':r={tgt:new T.Vector3(272,-8,-1),off:new T.Vector3(34,6,6)};break;
@@ -2358,12 +2359,12 @@ const nm=c=>c.charAt(0)==='1'?'1ª':c;
 async function aSort(cols,campo){
   await aView('classificadora',900);
   for(let i=0;i<cols.length;i++){const c=cols[i];if(SRT.err)sorterStop();
-    handTo('srt');
+    await aView('srtcomando',900);handTo('srt');
     await aSay(`Classificadora 083 · passada ${i+1} de ${cols.length}`,i===0
       ?`Um campo de ${cols.length} colunas (${campo}) se classifica <b>uma coluna por passada, da direita para a esquerda</b>. Começo pela coluna ${c}, a das unidades: giro a escova até ${c}, chave em N (numérico) e START.`
       :`Maço de volta no alimentador. Agora a escova vai para a coluna ${c}${i===cols.length-1?', a mais à esquerda do campo: é a última passada':''}.`);
     if(SRT.col!==c){sorterSetCol(c);await aSleep(900)}
-    while(SRT.sel!=='N'){sorterSel();await aSleep(400)}renderMachines();await aSleep(700);sorterStart();
+    while(SRT.sel!=='N'){sorterSel();await aSleep(400)}renderMachines();await aSleep(700);sorterStart();await aSleep(500);await aView('classificadora',900);
     if(i===0)await aSay('Classificadora 083','A 083 passa 1000 cartões por minuto. A escova sente o furo da coluna e uma lâmina desvia o cartão para o bolso daquele algarismo (9 a 0, 11, 12). Cartão sem furo na coluna vai para o R.');
     await aUntil(()=>!SRT.run);await aSleep(800);
     await aSay('Recolhendo os bolsos',i===0

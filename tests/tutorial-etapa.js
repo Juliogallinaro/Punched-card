@@ -2,7 +2,7 @@ const {chromium}=require('playwright');const fs=require('fs');const st=process.a
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1000,height:640}});
 const errs=[];p.on('pageerror',e=>errs.push(e.message));
 await p.route('**/three.module.min.js',r=>r.fulfill({body:require('fs').readFileSync(require('path').join(__dirname,'..','node_modules','three','build','three.module.min.js'),'utf8'),contentType:'application/javascript',headers:{'access-control-allow-origin':'*'}}));
-await p.setContent('<!doctype html><html><head><meta charset="utf-8"></head><body>'+fs.readFileSync(require('path').join(__dirname,'..','index.html'),'utf8')+'</body></html>');
+await p.setContent('<!doctype html><html><head><meta charset="utf-8"></head><body>'+fs.readFileSync(require('path').join(__dirname,'..','index.html'),'utf8')+'</body></html>');await p.waitForFunction(()=>typeof V!=='undefined'&&V.R,null,{timeout:30000});
 await p.evaluate(()=>{V.R.render=()=>{}});await p.click('[data-ti="tutor"]');await p.click(`[data-tu="${st}"]`);
 await p.evaluate(()=>{AUTO.speed=40;window._t=[];setInterval(()=>{if(AUTO.wait){window._t.push(document.querySelector('#narr b').textContent);AUTO.wait.res()}},20)});
 const t0=Date.now();await p.waitForFunction(()=>!AUTO.on,null,{timeout:1500000});
