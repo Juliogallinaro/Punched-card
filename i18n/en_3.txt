@@ -1,0 +1,164 @@
+600	A {0}-column field (the ACCOUNT, columns {1} to {2}) is sorted
+601	A {0}-column field (the SALESMAN, columns {1} to {2}) is sorted
+602	One stays in the deck
+603	A skip that reaches column {0} releases the card; with AUTO FEED on, the next one is registered in {1} of a second.
+605	TOTAL AMOUNT ¢
+606	AMOUNT ¢
+607	SLS
+608	SALES BY SALESMAN
+609	SALESMAN
+610	SALESMEN
+611	SALESMEN · COMMISSION
+612	SEE WIRING
+613	Sales of the day: D {0} CUSTOMERS and C {1} SALES REVENUE, both with the final total (**) from the {2} report.
+614	Salesman and customer
+615	Salesman {0}
+616	Salesman {0} and the customer.
+617	Salesman {0} in columns {1}–{2}. The customer (col. {3}–{4}) is alphabetic because the program card has the {5} punch in those columns. Since the name is shorter than the field, SKIP skips the rest.
+618	See wiring
+619	See the tutorial (restarts the game)
+620	See the tutorial (a whole day, explained)
+621	See the tutorial? The current game will be lost.
+622	Back to the title screen
+623	Back to the keypunch
+625	X.{0}A.{1} · counter {2}A, position {3} (output: added amount or total)
+626	X.{0}A.{1} → CP.{2} (click to remove)
+627	X.{0}A.{1} → E.{2}B.{3} (click to remove)
+628	X.{0}A.{1} → PU.{2} (click to remove)
+629	X.{0}B.{1} · counter {2}B, position {3} (output: added amount or total)
+630	X.{0}B.{1} → CP.{2} (click to remove)
+631	X.{0}C.{1} · counter {2}C, position {3} (output: added amount or total)
+632	X.{0}D.{1} · counter {2}D, position {3} (output: added amount or total)
+633	Left zero, {0} columns
+634	Left zero:
+635	the machine starts the day empty. FEED twice: the first puts a card in pre-registration, the second registers it at the punch station and puts another in pre-registration.
+636	the {0} key with the same letter; with
+637	the {0} key that has that digit ({1} = U, {2} = J, {3} = M...). In an alphabetic column the letter comes out, as on the real machine.
+638	the {0} key that has that symbol; the result depends on the column's mode.
+639	lever
+640	alphabetic
+641	hopper
+642	that column comes out in numeric mode; a letter key gives its numeric character (U becomes {0}, J becomes {1}...).
+643	space bar: advances without punching.
+644	pocket R
+645	pocket {0}
+646	every column that must be alphabetic
+647	each key has two characters. With the program on, the column is numeric, unless the program card has the alphabetic punch in it. The digits are on U I O ({0} {1} {2}), J K L ({3} {4} {5}), M , . ({6} {7} {8}) and on the {9} key of the top row. NUMERIC and ALPHA force the mode of the next key.
+648	card
+649	CLEAR switch
+650	FINAL TOTAL switch: ON
+651	click the panel fitted at the end of the {0}, or WIRING, to see and change the wires. Factory panels can be restored.
+652	click to change the panel
+653	column {0}
+654	with
+655	of the account.
+656	of a field: unpunch the left-zero holes in the first column; then you key the zeros.
+657	two programs
+658	two feeds, read (left) and punch (right, with blank cards). REPRODUCTION panel: copies each card from the read feed, hole by hole. GANGPUNCH panel: the first card in the punch feed is the master and its DATE (col. {0}–{1}) is punched into the following cards that are blank there; a card with X in column {2} becomes a new master. Connected by the cable, it also punches the summary cards that the {3} panel sends (SUMMARY PUNCH START).
+659	and on the
+660	in ascending order
+661	stacker
+662	read stacker
+663	fitted on the {0}
+664	chooses the program each card starts with when registered; the PROG ONE and PROG TWO keys switch in the middle of the card.
+665	space
+666	stays
+667	punch
+668	entries of the day
+669	read
+670	raise the program lever and click the drum to edit.
+671	when on, a {0} (or {1}) in the first column makes the card run through the whole field at {2} columns per second; a {3} (or {4}) duplicates the field from the card at the read station at {5} columns per second ({6} with PRINT off). With the switch off, only the SKIP and DUP keys do that.
+672	March {0}
+673	multiplying is adding the same number several times
+674	in column {0}.
+675	in column {0}. Handy when the same salesman sends several orders in a row.
+676	in column {0}. When the order changes, the new customer must be keyed: turn off AUTO SKIP DUP on that card or unpunch the {1}.
+677	at the end of the desk.
+678	none
+679	in the marked fields, the digits go into a register; press LEFT ZERO to punch with the zeros. ERROR RESET clears the register.
+680	on items of the same order: punch
+681	on the entries: punch
+682	numeric
+683	numeric, duplicates
+684	numeric, left zero of {0} col.
+685	no
+686	the field splits in two; SKIP and DUP stop in the middle.
+687	the field definition punch ({0} or {1}) starts a new field; the following
+688	the punch are part of it.
+689	the cards travel with you. TAKE THE DECK at the stacker, PUT IN HOPPER at each machine, TAKE FROM STACKER at the {0}. The top of the screen shows how many are in your hand.
+690	the two fields become one and the second one's program disappears.
+691	the zeros land in too many or too few columns.
+692	to TWO (the entry program) and press FEED twice. The {0} report is on the easel on the left; the instructions, on the clipboard on the right. Use the report as the source, even if it has your mistakes. Then take the entries to the machine room: sort by ACCOUNT (columns {1}, {2}, {3} and {4}) and run them on the {5} with the TRIAL BALANCE panel, ending with FINAL TOTAL.
+693	for each account. Take them to the steel file (with yesterday's originals, if you still have them) before closing the day: they are tomorrow's previous balance.
+694	take one from the rack
+695	chart of accounts
+696	first column
+697	first column of the field
+698	skips
+699	Wed {0} · {1} · {2} pts ·
+700	Wednesday, {0}
+701	new balance
+702	Mon {0} · {1} · {2} pts ·
+703	Mon {0} · {1} · {2} pts · hand: {3} cards ·
+704	Mon {0} · {1}+ · {2} pts ·
+705	Mon {0} · {1}+ · {2} pts · hand: {3} cards ·
+706	Monday, {0}
+707	held, its numeric character comes out (Shift = NUMERIC).
+708	without
+709	yes
+710	add
+711	{0}-key manual adding machine, it only adds and subtracts ({1}-digit register). Key the number and pull the right-hand lever (Enter) to add. Before pulling, the four-way button picks the function: up total ∗ (prints and clears), down subtotal ⋄, right subtract − (prints in red on the tape), left non-add ⊲ (only prints, for references). On the computer keyboard: arrows for the button, or * s - # which pull the lever directly. To multiply, add the same number several times; for ×{2}, append a zero.
+712	Tue {0} · {1} · {2} pts ·
+713	Tue {0} · {1} · {2} pts · hand: {3} cards ·
+714	Tue {0} · {1}+ · {2} pts ·
+715	Tue {0} · {1}+ · {2} pts · hand: {3} cards ·
+716	Tuesday, {0}
+717	every column of the field except the first
+718	one column per pass, from right to left
+719	turn PROG SEL to TWO before punching the entries.
+720	left zero
+721	left zero, {0} col. · LEFT ZERO (End) punches
+739	{0} cards put back in the stacker.
+740	{0} cards put in the {1} read feed.
+741	{0} cards put in the hopper.
+742	{0} previous balance cards
+743	{0} previous balance cards · {1} new balances filed
+744	{0} new balance cards filed for tomorrow.
+745	{0} original balance cards in hand. They can't go to the {1}: reproduce them on the {2} and return the originals to the file.
+746	{0} cards in hand (total {1}). Take them to a machine and click "put in hopper".
+747	{0} cards in the deck · {1} in the bin
+748	{0} cards in the deck · {1} in the bin · {2} in hand
+749	{0} wires
+750	{0} in the tray · next ~{1}
+751	{0} in the tray · all have arrived
+752	{0} originals back in the file.
+753	{0} stopped
+754	{0} got order {1} back: the math on one item was wrong. "Good catch, I'll fix it." +{2}
+755	{0} got order {1} back: one product code doesn't exist. "Good catch, I'll fix it." +{2}
+757	{0} × {1}: I key {2} and pull, {3} times. The Summa keeps adding on top of what was already in the register.
+758	{0}% of {1}: I added {2} {3} times, total {4} ∗. Two fewer decimal places: {5}.
+770	{0}st READING
+771	{0}–{1} of {2}
+772	·  · program: col. {0}–{1} · skips
+773	· D for debit, C for credit · program: col. {0}–{1}
+774	· DDMMYY · program: col. {0}–{1} · duplicates
+775	· DDMMYY, e.g.: {0} · program: col. {1}–{2} · duplicates
+776	· button:
+777	· account code, {0} digits · program: col. {1}–{2}
+778	· product code, {0} digits · program: col. {1}–{2}
+779	· salesman code, {0} digits · program: col. {1}–{2}
+780	· customer name, no accents · program: col. {0}–{1}
+781	· order number, {0} digits · program: col. {1}–{2}
+782	· unit price in cents ({0} → {1}) · program: col. {2}–{3}
+783	· quantity, no dots · program: col. {0}–{1}
+784	· free text, optional · program: col. {0}–{1}
+785	· line total in cents ({0} → {1}) · program: col. {2}–{3}
+786	· line total in cents ({0} → {1}) · program: col. {2}–{3} · skips
+787	· amount in cents · program: col. {0}–{1}
+788	· amount in cents · program: col. {0}–{1} · skips
+789	To the left of the drum is the program lever. Down, the starwheels (little toothed wheels) rest on the program card and read its holes. Up, the program is off.
+790	On the left, the tray with orders arriving from the salesmen. On the right, the price list. In the middle, the IBM {0} keypunch: the card runs from right to left, column by column, as I type. At the end of the desk, the adding machine.
+791	That's it: a day in the Keypunch Section. Now it's your turn, with the clock running. The Manual (button at the top) has everything you saw here, and from there you can replay the tutorial whenever you like.
+792	— no panel —
+795	▲ newest
+796	▼ oldest

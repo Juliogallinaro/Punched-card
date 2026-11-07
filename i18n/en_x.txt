@@ -1,0 +1,31 @@
+"+{0} pontos; {1} cartões-resumo certos da {2}: +{3}."	+{0} points; {1} correct summary cards from the {2}: +{3}.
+"A operadora veterana mostra o serviço passo a passo. Escolha o dia inteiro ou só uma parte. O jogo recomeça do zero no fim."	The senior operator shows the job step by step. Choose the whole day or just one part. The game starts over from scratch at the end.
+"Cartões em branco, coluna da escova e classificação por vendedor."	Blank cards, brush column and sorting by salesman.
+"Chaves, cartão-programa e perfuração dos pedidos, com DUP e LEFT ZERO."	Switches, program card and punching the orders, with DUP and LEFT ZERO.
+"Classificadora IBM {0}"	IBM {0} sorter
+"Contabilidade e saldos"	Accounting and balances
+"Contabilizadora IBM {0} e reprodutora {1}"	IBM {0} accounting machine and {1} reproducing punch
+"Esta parte do serviço acabou. Você pode escolher outra etapa no tutorial (Menu ▸ Ver o tutorial) ou começar o expediente."	This part of the job is over. You can pick another stage in the tutorial (Menu ▸ See the tutorial) or start the shift.
+"Fim da etapa"	End of stage
+"Lançamentos, cópia dos saldos na {0}, balancete e arquivo."	Entries, copying the balances on the {0}, trial balance and filing.
+"O pedido {0} tem {1} itens. Antes de perfurar, a operadora confere as contas na somadora."	Order {0} has {1} items. Before punching, the operator checks the math on the adding machine.
+"Painel de controle, totais por vendedor e cartões-resumo."	Control panel, totals by salesman and summary cards.
+"Perfuradora IBM {0}"	IBM {0} keypunch
+"Somar, subtotal, total e multiplicar somando."	Adding, subtotal, total and multiplying by adding.
+"Tutorial completo"	Full tutorial
+"Tutorial · Classificadora IBM {0}"	Tutorial · IBM {0} sorter
+"Tutorial · Contabilidade e saldos"	Tutorial · Accounting and balances
+"Tutorial · Perfuradora IBM {0}"	Tutorial · IBM {0} keypunch
+"Tutorial · Somadora Olivetti Summa {0}"	Tutorial · Olivetti Summa {0} adding machine
+"Tutorial · Contabilizadora IBM {0} e reprodutora {1}"	Tutorial · IBM {0} accounting machine and {1} reproducing punch
+"Somadora Olivetti Summa {0}"	Olivetti Summa {0} adding machine
+"Um dia inteiro, do primeiro pedido ao balancete."	A whole day, from the first order to the trial balance.
+"Voltar"	Back
+"Jogo novo. O primeiro pedido está na bandeja."	New game. The first order is in the tray.
+"Dia {0} recomeçado."	Day {0} restarted.
+"Som: desligado"	Sound: off
+"contabilidade"	accounting
+"sala de máquinas"	machine room
+"Recorde neste navegador: {0} pontos"	Record in this browser: {0} points
+"Os {0} cartões de pedido já estão na minha mão, classificados por vendedor."	The {0} order cards are already in my hand, sorted by salesman.
+"Tutorial: completo ou por etapa"	Tutorial: full or by stage

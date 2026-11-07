@@ -1,0 +1,179 @@
+0	"See the tutorial" (on the opening screen or at the end of this manual) shows a whole day done by the senior operator, step by step, waiting for you to click Continue. Then the game starts over from scratch.
+1	(steel file cabinet, top drawer): holds each account's balance up to yesterday; on day {0}, February's. The trial balance must include these balances. Originals never leave the file: reproduce them on the {1}, return the originals and add the copies to the entries. After the trial balance, the {2} punches each account's new balance: file them before closing the day (+{3}; if missing or wrong, −{4}). An original run through the {5} costs {6} points.
+2	(blank)
+3	(rack on the right), put the deck in the hopper and press START. When the last card leaves the hopper it stops: START again runs the machine out. Then,
+4	(rows {0} to {1}), the order one: ORDER NO., {2} columns with left zero; DATE, duplicated from the previous card; SALESMAN; CUSTOMER, alphabetic ({3} punch in every column); PRODUCT; QUANTITY, PRICE and AMOUNT with left zero; and the rest of the card skips. The lower rows ({4} to {5}) hold the
+5	(free)
+6	(on the next cycle or with CLEAR). Before closing the shift, turn CLEAR to empty the card bed.
+7	(or Enter). This day scores no points.
+8	(Home key) twice to feed and register a card.
+9	(Home key) to feed and register a card.
+10	(salesman units digit), START. Collect the pockets
+11	({0} cards/min): the brush reads one column and each card drops into the pocket of its punch ({1} to {2}, {3}, {4}; blank goes to R). Sort first on the units column and last on the leftmost column of the field. Between passes, collect the pockets in ascending order: the first pocket you pick up goes in front. SORT SELECTION changes the pattern (N numeric, Z zone, A-{5} and A-{6} alphabetic); EDIT rejects cards with more than one punch.
+12	({0} cards/min): each card passes the {1}st and the {2}nd reading. The panel compares the field of the incoming card ({3}st) with the one being printed ({4}nd); when it changes, the machine takes a total cycle (*). When the last card leaves the hopper it stops: START runs the machine out and FINAL TOTAL prints the final total (**).
+13	({0}, {1}, {2}…; the first one you pick up goes in front of the deck) and put them back in the hopper. Blank cards (the CLEAR switch also sends the ones that were in the bed) drop into pocket R: leave them out. Repeat on column
+14	+{0} points (includes a {1} bonus for closing before {2}); {3} correct summary cards from the {4}: +{5}.
+15	+{0} points for the accounting.
+16	, behind the glass partition: IBM {0} sorter, IBM {1} reproducing punch and IBM {2} accounting machine, with the control panel rack.
+17	, with the plant's {0} accounts ({1} Customers, {2} Sales tax payable, {3} Commissions payable, {4} Sales revenue, {5} Sales tax on sales and {6} Commission expense). Today only sales go in: {7} debit and {8} credit. Commissions start on day {9} and sales tax on day {10}.
+18	, from {0} to {1}: the first one I pick up goes in front of the deck. Since each pass keeps the previous order within the same pocket, after the last column the whole deck comes out in order.
+19	, the entries one.
+20	, and pull the lever {0} times. The keyboard clears on every pull, so I key it again before each one.
+21	, connected by the cable, punches a summary card for each salesman. Correct summary cards earn extra points.
+22	, in the middle: hopper (right), pre-registration, punching, reading and stacker (left). The program drum sits above the punch station, with the program lever beside it; the BACKSPACE key is under the card bed.
+23	, the digits go into a register instead of punching. The LEFT ZERO key punches zeros and digits right-aligned to the width of the code ({0} to {1} columns). ERROR RESET clears the register.
+24	. I start with column {0}, the units: I turn the brush to {1}, switch on N (numeric) and START.
+25	. Enter pulls the lever. Arrows choose the function: ↑ total ∗, ↓ subtotal ⋄, → subtract −, ← non-add ⊲ (or type * s - #). Backspace corrects. Esc goes back to the keypunch.
+26	. In it, a digit selector reads column {0}: the letter C (punches {1} and {2}) transfers a pilot selector and sends the amount to the credit counter; D goes to the debit one.
+27	. PROG {0} uses the upper rows ({1}, {2}, {3}, {4}, {5}, {6}) and PROG {7} the lower ones ({8}, {9}, {10}, {11}, {12}, {13}). The switch
+28	. The alphabetic punch works column by column: the IBM manual requires the code in every column that must be alphabetic.
+29	. Amounts are keyed in cents ({0} becomes {1}).
+30	: AUTO SKIP DUP, PROG SEL, AUTO FEED, PRINT, LZ PRINT and CLEAR, as on the {0}.
+31	: TAKE THE DECK (the cards go into your hand).
+32	: fit the panel
+33	: stacker (close the shift, take the deck, remove cards), clock, board and notice board.
+34	: open order (at closing, the {0} report).
+35	: put in the hopper, brush on column
+36	: price list (at closing, the accounting office).
+38	The Summa doesn't multiply: for {0}% of a total, I add the total {1} times and read the result with two fewer decimal places. The last two digits are the fraction of a cent that I round.
+39	The CLEAR switch empties the card bed: it also sent to the stacker the {0} cards that were in the bed with no punches. A blank card in the deck only gets in the way. I take them out with the REMOVE button and toss them in the bin
+40	Management lost confidence in the Keypunch Section on day {0}. You finished with {1} points.
+41	The accounting office checks account by account. This is the day's result.
+42	The desk
+43	The machine starts the day empty. First FEED: a blank card drops from the hopper to pre-registration. Second FEED: it is registered at the punch station, column {0}, and another drops to pre-registration.
+44	From today on, the accounting office wants the sales tax entry along with the closing.
+45	The keypunch is empty: press FEED twice (Home key) to feed and register the first card. On the first card there is no card at the read station to duplicate the DATE: the machine locks when duplicating blank columns in a numeric field. Press ERROR RESET and key {0}; on the following cards the DATE is duplicated.
+46	The room
+47	The {0} read {1} cards from your deck. The Sales Department sent the adding-machine tape with the total of the day's valid orders.
+48	The {0} has no stored program: what it does is set by the control panel, full of wires. Routine reports have their own panel, already wired. I take the
+49	The {0} stopped: the last card left the hopper. Press START to run the machine out (the last cards and the last total).
+50	The {0} runs {1} cards per minute. The brush senses the column's punch and a blade diverts the card to that digit's pocket ({2} to {3}, {4}, {5}). A card with no punch in the column goes to R.
+51	The {0} punched a card of
+52	The {0} punched a new balance card for each account: yesterday's balance plus today's activity. Tomorrow they will be the previous balance.
+53	The {0} has two feeds: the read feed on the left and the punch feed on the right, with blank cards. With the REPRODUCTION panel, each card read is copied, hole by hole, into a blank card. I put the {1} originals in the read feed and press START.
+55	LEVER DOWN
+56	PROGRAM LEVER
+57	ALPHA
+58	ALPHABETIC
+59	HOPPER
+60	ALPHA / NUMERIC for the next key
+61	FILED
+62	FILE (already punched)
+63	FILE NEW BALANCE
+69	The day's orders are done. I turn the CLEAR switch: it runs the cards left in the bed to the stacker without punching anything.
+70	Found it: the math on one item is wrong. A wrong order is not punched: I send it back to the salesman to fix.
+71	Found it: one product code doesn't exist. A wrong order is not punched: I send it back to the salesman to fix.
+72	Now the accounting office needs the day's entries. The keypunch bed was emptied and the hopper got entry cards. Turn the switch
+73	There are still {0} orders in the tray neither filed nor returned. Whatever isn't punched will be missing at closing.
+74	Program lever
+75	Tomorrow: more orders and the sales tax entry.
+76	Tomorrow: more orders, a new salesman and the commission calculation.
+77	Before starting, I check the switches on the panel above the keyboard. They change how the machine works. I'll show them one by one.
+78	Before punching, I check the math on the Olivetti Summa {0} adding machine. It only adds and subtracts:
+79	Here the comparison is on the ACCOUNT (col. {0}–{1}): for each new account, a debit total and a credit total for that account come out, already including the previous balance. In the same cycle, the SUMMARY PUNCH wire tells the {2} to punch the
+80	Filed
+81	File cabinet
+82	Balance file
+83	Behind the glass partition are the machines that turn the deck into a report: the IBM {0} sorter, the IBM {1} reproducing punch and the IBM {2} accounting machine, with the control panel rack beside them.
+86	BACKSPACE (under the bed): goes back one column, without erasing punches.
+87	TRIAL BALANCE
+88	ORDER TRAY
+90	Trial balance closed
+91	Trial balance: TRIAL BALANCE panel, deck sorted on columns {0}, {1}, {2} and {3}.
+92	Tray empty
+93	Welcome to the Keypunch Section of Fundição Tamanduateí, March {0}. In this tutorial I, the section's most senior operator, do a whole day in front of you: I punch the orders on the IBM {1}, take the deck to the machine room and close the books. Read each explanation and click
+94	Pocket R
+95	Pocket {0}: {1} card(s) into your hand, behind the ones already there. In hand: {2}.
+96	Good morning! The first order is in the tray. Press FEED (Home) twice to feed the keypunch.
+97	Good morning. Wednesday, {0}. {1} orders expected until {2}.
+98	Good morning. Monday, {0}. {1} orders expected until {2}.
+99	Good morning. Tuesday, {0}. {1} orders expected until {2}.
+100	Four-way button down (⋄, subtotal) and pull: {0} ⋄, that is, NCr$ {1}. It matches the first item of the order. The subtotal shows what is in the register without clearing it.
+101	Button up (∗, total) and pull: {0} ∗, NCr$ {1}, the same as the total written by the salesman. The total prints and clears the register. To the right the button subtracts (−, prints in red); to the left it is non-add (⊲), which only prints a reference number.
+103	CA.{0} · comparing {1}, input A
+104	CARD CYCLES (outputs)
+106	PROGRAM CARD
+107	CB.{0} · comparing {1}, input B
+108	CC.{0} · CARD CYCLES: impulse on every detail card (output)
+109	CC.{0} → PL.{1}A (click to remove)
+111	CLEAR: all cards left the bed for the stacker, without feeding new ones.
+112	CUSTOMER
+113	CUSTOMERS
+115	COMMISSIONS PAYABLE
+116	COMPARING · comparing (A and B inputs, output below)
+117	MANAGEMENT CONFIDENCE
+118	ACCOUNT
+120	ACCOUNTING
+125	COUNTER-CONTROLLED PRINT · counter print (inputs, wheels {0}-{1})
+126	CP.{0} · wheel {1}, counter-controlled print (input)
+127	CX.{0} · comparing {1}: impulse when A and B differ (output)
+128	CX.{0} → PS.MIN (click to remove)
+129	Field
+130	Card field
+131	Cancel
+132	Card
+133	Card {0} removed from the deck and tossed in the bin.
+134	Program card
+135	Program card:
+136	Correct cards
+137	Correct order cards
+138	Blank cards
+139	Cards only reach the stacker when they leave the read station
+140	Easel on the left
+141	{0} switches
+142	Order {0} arrived, from salesman {1} ({2}), for {3}.  It has a single item: it will become one card. Before punching, I check the codes and prices against the list, and redo the quantity × price math.
+143	Order {0} arrived, from salesman {1} ({2}), for {3}.  It has {4} items: each item becomes a card, and the cards of the same order repeat the ORDER NO., the SALESMAN and the CUSTOMER. Before punching, I check the codes and prices against the list, and redo the quantity × price math.
+144	Sorter stopped: the hopper is empty.
+145	Sorter {0}
+146	Sorter {0} · pass {1} of {2}
+147	Click the positions to punch or unpunch the program card. Then mount it on the drum and lower the lever.
+148	Click a hub and then another to plug a wire. With a wider width, the wire connects neighboring hubs in sequence (a multi-wire cable). Click a wire to remove it. Colors: red = reading, blue = counter output, amber = control impulses, green = between inputs. Hover over a hub to see what it does.
+149	Click an object to move the camera to it, or use the buttons at the top. Drag with the left button to orbit; drag with the right button (or middle, or Shift + left) to pan; the mouse wheel zooms toward the point under the cursor (over the stacker and the report it scrolls the paper; hold Shift to zoom there). To return to the original framing, click the view button at the top again.
+150	Click a grid position to punch or unpunch; the strips at the top show the resulting fields.
+151	Click a position to punch or unpunch. Only the shaded rows have a function.
+152	Columns
+153	Columns {0} to {1}. The program card marks this field with left zero: the digits {2} go into a register and the LEFT ZERO key punches {3}, with the zeros in front.
+154	With the program lever raised (starwheels off the card), there is no program: the keyboard is in alphabetic mode, SKIP runs to column {0} and DUP copies one column at a time.
+155	With the switch
+156	With the {0} report on the easel, I prepare the day's entries: sales (grand total NCr$ {1}) and the salesmen's commissions (NCr$ {2}). Each amount goes in twice: one account debited and another credited.
+157	With the {0} report on the easel, I prepare the day's entries: sales (grand total NCr$ {1}). Each amount goes in twice: one account debited and another credited.
+158	Start day {0}
+159	Start the shift
+160	Start a new game? The current game will be lost.
+161	Start:
+162	Start of shift
+163	Commissions on the Summa
+164	Commissions: compute each salesman's on his total, round to the cent and add them up. D {0} and C {1} (one pair with the sum or one pair per salesman). On the Summa, which only adds and subtracts, {2}% means adding the total {3} times: the last two digits of the ∗ total are the fraction of a cent.
+165	How the machine reads the program
+166	How to read it
+167	Behavior
+168	Checking
+169	Accounting office check
+170	Account {0} (CUSTOMERS) debit, NCr$ {1}, description SALES OF THE DAY. The DATE (col. {2}–{3}) is already duplicated; the letter D or C goes in column {4}, the AMOUNT has left zero and SKIP releases the card at the end of the description.
+171	Account {0} (COMMISSIONS PAYABLE) credit, NCr$ {1}, description COMMISSIONS OF THE DAY.
+172	Account {0} (COMMISSION EXPENSE) debit, NCr$ {1}, description COMMISSIONS OF THE DAY.
+173	Account {0} (SALES REVENUE) credit, NCr$ {1}, description SALES OF THE DAY.
+174	Accounting
+175	Accounting machine {0}
+176	Accounting office
+177	Continue
+178	Resume game
+179	Continue ▸
+180	Sales control NCr$
+181	CODE
+182	Left-zero code with the wrong width:
+183	Codes (IBM {0} Reference Manual, fig. {1})
+184	Copies ready
+187	DATE
+188	DC.A · digit selector A: common (input, wire a column)
+189	DC.B · digit selector B: common (input, wire a column)
+190	DISCARD
+191	DESCRIPTION
+192	COMMISSION EXPENSE
+193	PUT CARDS BACK
+194	RETURN TO SALESMAN
+195	RETURN ORIGINALS
+196	RETURNED
+197	DAY {0}
+198	DIGIT SELECTORS · digit selectors
+199	DS.A.{0} · digit selector A: impulse if the column has punch {1}

@@ -1,0 +1,10 @@
+const {chromium}=require('playwright');const fs=require('fs');const st=process.argv[2];
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1000,height:640}});
+const errs=[];p.on('pageerror',e=>errs.push(e.message));
+await p.route('**/three.min.js',r=>r.fulfill({body:fs.readFileSync(require.resolve('three/build/three.min.js'),'utf8'),contentType:'application/javascript'}));
+await p.setContent('<!doctype html><html><head><meta charset="utf-8"></head><body>'+fs.readFileSync(require('path').join(__dirname,'..','index.html'),'utf8')+'</body></html>');
+await p.evaluate(()=>{V.R.render=()=>{}});await p.click('[data-ti="tutor"]');await p.click(`[data-tu="${st}"]`);
+await p.evaluate(()=>{AUTO.speed=40;window._t=[];setInterval(()=>{if(AUTO.wait){window._t.push(document.querySelector('#narr b').textContent);AUTO.wait.res()}},20)});
+const t0=Date.now();await p.waitForFunction(()=>!AUTO.on,null,{timeout:1500000});
+const r=await p.evaluate(()=>({titles:window._t.join(' | ').slice(-500),ov:document.querySelector('#sheet h2')&&document.querySelector('#sheet h2').textContent,verdict:(window.__v||'')}));
+console.log(st,Math.round((Date.now()-t0)/1000)+'s',JSON.stringify(r),errs);await b.close()})().catch(e=>{console.log('FAIL',st,e.message);process.exit(1)});

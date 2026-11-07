@@ -1,0 +1,158 @@
+200	DS.B.{0} · digit selector B: impulse if the column has punch {1}
+202	DUP, DUP, DUP: order, salesman and customer copied from the previous card.
+203	Again from pocket {0} to {1}.
+204	Field definition (continuation)
+205	Field definition in the first column of a field:
+206	Definition missing in the middle:
+208	Turn off left zero
+209	Return to the salesman any order with a nonexistent code, a price not on the list or wrong math.
+210	Perfect day. The section head lit one more confidence lamp.
+211	Day {0} · {1} · {2} points · clock stopped while the menu is open
+212	Difference
+213	Sales difference
+214	Discrepancies
+215	Duplicate the customer
+216	Duplicate the salesman:
+217	Duplicating a blank column in a numeric field locks the keyboard; ERROR RESET releases it.
+218	Duplicating a blank column in a numeric field: keyboard locked. There is no card at the read station. Press ERROR RESET (Esc) and key the field.
+220	E.{0}A.{1} · counter {2}A, position {3} (entry)
+221	E.{0}B.{1} · counter {2}B, position {3} (entry)
+222	E.{0}C.{1} · counter {2}C, position {3} (entry)
+223	E.{0}D.{1} · counter {2}D, position {3} (entry)
+224	STACKER
+225	FIT
+226	CLOSE THE SHIFT
+228	ERROR RESET: keyboard released and left-zero register cleared.
+229	STACKER
+230	RACK
+231	It stopped when the last card left the hopper: there are still cards at the read stations. START again runs the machine out and, on the last card, forces the last total (*).
+232	In each column: punch {0} continues the field (without it, a new field starts); {1} skips the field; {2} duplicates; {3} makes the column alphabetic; {4} and {5} in the first column mark the left zero and its width. The Program card manual has the full table.
+233	Fit on the {0}
+234	Closing the shift
+235	Close anyway
+236	Close the shift?
+237	I finish punching. The deck now goes to the machine room.
+240	Common mistakes
+241	Made a mistake?
+243	Stacker
+244	Chooses which of the program card's two programs each card starts with. ONE is the order program; TWO, the accounting entries one.
+245	Sorter brush on column {0}.
+246	Space
+247	This one is only used at the end of the job: it runs the cards in the bed to the stacker without punching anything. For now it stays put.
+248	Rack
+249	Panel rack
+250	Punch station empty. Press
+251	This game needs a browser with WebGL enabled to draw the room in {0}D.
+252	This last blank card I leave in the deck on purpose, so you can see what the sorter does with it: a card with no punch in the brush column has no digit pocket and drops into pocket R, the reject pocket.
+253	Shift closed. Take the deck to the sorter ({0}), sort by salesman and run it on the {1} with the SALES BY SALESMAN panel.
+255	CLOSE THE DAY
+257	WIRING
+259	FINAL TOTAL (outputs)
+260	FINAL TOTAL prints the grand totals of debits and credits (**). If both are equal, the double entries balance.
+261	FIRST READING · {0}st reading (outputs, columns {1}-{2})
+262	FT.{0} · FINAL TOTAL: impulse when the FINAL TOTAL key is pressed (output)
+263	FT.{0} → RR.{1}B (click to remove)
+267	Sales closing
+268	Closing:
+269	Close
+270	Close the day
+271	End of order punching
+272	End of card:
+273	End of day {0}
+274	End of shift: close at the stacker and bring the deck sorted by salesman.
+275	End of tutorial
+276	End of orders
+277	Fundição Tamanduateí Ltda. · Santo André, March {0}
+278	Function
+279	Alphabetic punch missing in a column:
+280	A punch can't be erased. Release the card with REL, punch a new one using DUP to copy the good fields from the wrong card (now at the read station), then take the wrong one out of the deck on the stacker board.
+281	Punches in the {0}st column
+282	Punches in the others
+285	DESCRIPTION
+286	TIME
+289	SALES TAX PAYABLE
+290	SALES TAX ON SALES
+293	Start of automatic duplication
+294	Start of automatic skip
+295	Go file the balances
+296	Go to the accounting office
+297	Go to the stacker
+298	Order item {0}
+301	ENTRY
+303	CLEAR ALL
+305	LIST · LIST: wire to OFF to print totals only
+306	LIST.OFF · OFF: wired to LIST, prints totals only (group printing)
+309	Entry
+310	Entries ready. CLEAR takes the last card to the stacker.
+311	Wire width:
+312	Raise the program lever (left of the drum) and click the drum, or Program at the top, to take it out. Out of the machine you can't punch, and the clock keeps running.
+313	I raised the lever and took out the drum to show you. The strips at the top are the fields of the
+314	When on, the {0} prints each column's character at the top of the card, so we can read it without decoding the holes.
+315	When on, it also prints the left zeros that the LEFT ZERO key punches.
+316	When on, the program card can skip and duplicate fields by itself. When off, only the SKIP and DUP keys do that.
+317	When on, as a card finishes the machine releases it and registers the next one by itself.
+321	MI.{0}A · counter {1}A MINUS: subtracts on this cycle
+322	MI.{0}B · counter {1}B MINUS: subtracts on this cycle
+323	MI.{0}C · counter {1}C MINUS: subtracts on this cycle
+324	MI.{0}D · counter {1}D MINUS: subtracts on this cycle
+326	MOUNT ON DRUM
+327	MULT PCH (hold and release): multiple punches in the same column.
+328	NOTICE BOARD
+330	Program card manual
+331	Deck back in the hopper. Now the brush goes to column {0}, the leftmost of the field: it is the last pass.
+332	Deck back in the hopper. Now the brush goes to column {0}.
+333	Deck in the hopper and START. Each card passes the {0}st reading and then the {1}nd: the {2} prints the card at the {3}nd while comparing it with the next one, at the {4}st. That's {5} cards per minute.
+335	Desk
+336	Same order, another item: DUP key three times. It copies field by field the ORDER NO., SALESMAN and CUSTOMER from the previous card, now at the read station.
+337	Alphabetic mode
+338	Keyboard mode:
+339	Mount on drum applies it; Discard (or Esc) keeps the old one. Then lower the lever.
+340	Multiply by {0}
+341	EMPTY HAND
+342	Machine empty. Press FINAL TOTAL to print the final total.
+343	Machine empty: the FINAL TOTAL key prints the grand total (**), which kept adding up in counter {0}B at each salesman total. The {1}, connected by the cable, punched a summary card for each salesman.
+344	Machines
+345	Hand:
+349	NORMAL PRINT ENTRY · print (inputs, wheels {0}-{1})
+353	NUMERIC
+354	On the clipboard to the right of the keypunch, in place of the price list, are now the accounting office's instructions: which entries to make today, each salesman's commission and the
+355	No hub selected.
+356	No discrepancies. Perfect deck.
+357	Nobody filed the new balances. The accounting office punched them by hand: −{0}.
+358	In game
+359	News: {0} ({1}) joined the sales team. Today the accounting office also wants the commissions.
+360	New game
+361	In a field of
+362	ORDER NO.
+363	Order no.
+364	There is no order in the tray. I wait for the next one to arrive from the sales department.
+366	The Manual, at the top, explains the keys, the program card and the machines, and has the button to replay the tutorial.
+367	The trial balance isn't only for the day: each account starts with the balance accumulated up to yesterday. Those balances are on cards, here in the steel file: {0} D {1} and {2} C {3}. They are from last month, up to {4}.
+368	The trial balance adds by account, and now the deck mixes today's entries with yesterday's balances. For each account to come out with a single total, the deck is sorted by ACCOUNT.
+369	The card went past column {0}.
+370	The program card is held on the drum by a clamping strip. The drum turns together with the card being punched, column by column, and the starwheels (little toothed wheels at the tip of spring levers) sense the holes. The holes tell the machine what to do in each column: continue the field, skip, duplicate from the card at the read station, stay in alphabetic mode or store the digits for left zero.
+371	The format the tabulator reads doesn't change: ORDER NO. in columns {0}–{1}, TOTAL AMOUNT in {2}–{3} and so on. The program card only changes how the keypunch behaves.
+372	The same card holds
+373	The same program card has two programs: {0} on the upper rows (order) and {1} on the lower ones (entry). I turn PROG SEL to TWO.
+374	The first card carries the keyed DATE ({0}). Amounts in cents: NCr$ {1} becomes {2}; key it and press SKIP. Debits must balance with credits. Then sort by ACCOUNT (col. {3}, {4}, {5}, {6}) and run it on the {7} with the TRIAL BALANCE panel.
+375	The program called for duplicating the DATE from the previous card, but this is the first of the day: there is no card at the read station, and duplicating a blank column in a numeric field locks the keyboard. ERROR RESET and I key the date by hand. The next cards will duplicate it on their own.
+376	The sales report comes out of the IBM {0} accounting machine, which reads the deck in the order it goes in. For a total per salesman, each salesman's cards must be together.
+377	The report goes to the sales section, which checks the {0} total against the control tape. This is the result.
+378	The clock stopped: the machine room doesn't count time. You can still punch new cards on the {0} to fix the deck.
+379	The drum is back with the old program card. Lower the lever to engage the program.
+380	The tutorial is over and the day restarted from scratch: Monday, {0}, tray with the first order. The clock only starts running when you click below.
+381	Left zero goes up to {0} columns at most. That's why TOTAL AMOUNT (columns {1}–{2}) is programmed as a {3}-column skip followed by a {4}-column left-zero field; the tabulator reads blank columns as zero.
+385	Look at pocket R: the blank card dropped here on the very first pass, because it had no punch in the brush column. Since I only collect pockets {0} to {1}, it stays out of the deck by itself.
+386	Look at pocket R: {0} blank cards dropped here on the very first pass, because they had no punch in the brush column. Since I only collect pockets {1} to {2}, they stay out of the deck by themselves.
+387	Where to punch
+388	Keypunch operation
+389	Originals back in the file. The copies go to the stacker, together with today's entries.
+390	Originals returned
+391	Originals never leave the file
+392	Originals never leave the file: reproduce them on the {0} and use the copy.
+393	Cards released with REL drop here, in order. A wrong card in the deck goes wrong to the {0}: take it out first.
+394	The wires connect the {0}st reading to the print wheels, TOTAL AMOUNT (col. {1}–{2}) to counter {3}A, and the salesman (col. {4}–{5}) from the {6}st and {7}nd readings to the comparing unit. When the salesman changes, the comparison triggers a minor total cycle.
+395	The originals dropped into the read stacker and the copies into the punch stacker. The {0} also gangpunches (the DATE of the first card punched into the following ones) and, connected by the cable, does the summary punching the {1} sends.
+396	The originals left the file. Return them after reproducing on the {0}.
+397	Routine report panels are kept wired on the rack. Fit the job's panel on the right end of the {0}. You can open any panel and change the wiring.
+398	Salesmen send handwritten orders. You punch each item on an {0}-column card on the IBM {1}, take the deck to the machine room and close the books before the {2} siren.

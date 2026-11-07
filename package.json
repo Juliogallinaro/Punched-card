@@ -1,0 +1,15 @@
+{
+  "name": "punched-card",
+  "private": true,
+  "description": "Seção de Perfuração — simulação 3D de um operador de perfuradora IBM 029 (1968)",
+  "scripts": {
+    "check": "node tools/check-syntax.js",
+    "test": "node tests/tutorial-completo.js",
+    "test:etapa": "node tests/tutorial-etapa.js",
+    "i18n": "python3 tools/build_en.py"
+  },
+  "devDependencies": {
+    "playwright": "^1.40.0",
+    "three": "0.128.0"
+  }
+}

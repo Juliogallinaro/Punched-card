@@ -1,0 +1,167 @@
+400	FACTORY DEFAULT
+401	PANEL
+402	FREE PANEL
+403	PANEL: REPRODUCTION
+404	PANELS
+405	PAUSED
+406	PC.{0} · pilot selector {1}, position {2}: common (input)
+407	PD.{0} · pilot selector {1}, D pickup: transfers on any impulse
+408	ORDER
+409	SALES ORDER  No.
+411	TAKE THE DECK
+412	TAKE ORIGINALS
+413	PILOT SELECTORS · pilot selectors
+414	PL.{0}A · counter {1}A PLUS: adds on this cycle (control input)
+415	PL.{0}B · counter {1}B PLUS: adds on this cycle (control input)
+416	PL.{0}C · counter {1}C PLUS: adds on this cycle (control input)
+417	PL.{0}D · counter {1}D PLUS: adds on this cycle (control input)
+418	CHART OF ACCOUNTS
+419	PM.INT.{0} · PROGRAM INT: impulse on the total cycle (output)
+420	PM.MAJ.{0} · PROGRAM MAJ: impulse on the total cycle (output)
+421	PM.MIN.{0} · PROGRAM MIN: impulse on the total cycle (output)
+422	PM.MIN.{0} → PL.{1}B (click to remove)
+423	PM.MIN.{0} → RR.{1}A (click to remove)
+424	PM.MIN.{0} → SP.START (click to remove)
+425	PN.{0} · pilot selector {1}, position {2}: normal (out when not transferred)
+426	POINTS
+427	PR.{0} · print wheel {1} (input)
+428	UNIT PRICE
+429	UNIT PRICE ¢
+432	PRODUCT
+437	PROG SEL on ONE: takes effect from the next registered card.
+438	PROG SEL on TWO
+439	PROG SEL on TWO: takes effect from the next registered card.
+443	PROG {0} on rows {1}–{2}, PROG {3} on rows {4}–{5} · {6} continues the field (no punch = new field) · {7} skips · {8} duplicates · {9} alphabetic, in every column of the field · left zero in the {10}st column: {11} = {12} col., {13} = {14}, {15}-{16}-{17} = {18}, {19}-{20}-{21} = {22}, {23}-{24}-{25} = {26}, {27}-{28}-{29}-{30}-{31} = {32}. The tabulator always reads the same format.
+444	PROGRAM (outputs)
+445	PROGRAM START (inputs)
+446	PS.INT · PROGRAM START INT: calls an intermediate total cycle
+447	PS.MAJ · PROGRAM START MAJ: calls a major total cycle
+448	PS.MIN · PROGRAM START MIN: calls a minor total cycle
+449	PT.{0} · pilot selector {1}, position {2}: transferred
+450	PU.{0} · {1} punch magnet, column {2} (input)
+451	SKIPS
+452	PX.{0} · pilot selector {1}, X pickup: transfers when there is a {2} punch (X)
+454	Panel
+455	TRIAL BALANCE panel fitted on the {0}.
+456	SALES BY SALESMAN panel
+457	SALES BY SALESMAN panel fitted on the {0}.
+458	Control panel:
+459	Panel fitted
+460	To the machine room
+461	For the trial balance, the panel
+462	Wall
+463	Order
+464	Order filed
+465	Order filed.
+466	Order with an error
+467	Order returned to the salesman.
+468	New order: I key {0} and LEFT ZERO.
+469	Order {0}
+470	Order {0} arrived ({1}, {2} item).
+471	Order {0} arrived ({1}, {2} items).
+472	Order {0} returned: the math on one item was wrong. +{1}
+473	Order {0} returned: one product code doesn't exist. +{1}
+474	I take the deck: {0} cards, in the order they were punched. For the {1} to add by salesman, each salesman's cards must be together. That's why the deck goes through the sorter first.
+475	Keypunch
+476	Autopilot on: the senior operator takes over the section and explains each step. With autopilot, this game's score doesn't count for the record.
+477	Autopilot: day completed.
+478	Total points
+479	Inside the program
+480	Accounting clipboard
+481	Clipboard on the right
+482	Held on this drum is the program card: an ordinary card whose holes tell the machine what to do in each column. The drum turns together with the card I punch, column by column.
+483	Product and amounts
+484	Product {0}, then QTY {1}, PRICE {2} and AMOUNT {3}, each with LEFT ZERO. At the last column of AMOUNT the program skips to column {4}: the card is released, goes to the read station and the next one is registered by itself.
+485	Product {0}, {1} × {2} = {3}.
+486	Program
+487	Factory default program · PROG {0} (entry)
+488	Factory default program · PROG {0} (order)
+489	Next item
+490	Skip the description
+491	PUT IN HOPPER ({0})
+492	QTY
+493	QUANTITY
+495	SALES REVENUE
+496	RECORD {0}
+499	REL runs the card to column {0} (duplicating the automatic-duplication fields along the way). With AUTO FEED on, the card goes to the read station and the next one is registered.
+501	RR.{0}A · counter {1}A READ OUT AND RESET: prints the total and clears
+502	RR.{0}B · counter {1}B READ OUT AND RESET: prints the total and clears
+503	RR.{0}C · counter {1}C READ OUT AND RESET: prints the total and clears
+504	RR.{0}D · counter {1}D READ OUT AND RESET: prints the total and clears
+506	Revenue
+507	Collecting the pockets
+508	I collect the pockets
+509	Restart from day {0}
+510	Restart day {0}
+511	Restart day {0}? Points earned today will be lost.
+512	Left-zero register
+513	Report
+514	{0} report
+515	Sales report: SALES panel, deck sorted on columns {0}, {1} and {2}.
+516	Reproducing punch {0}
+517	Reproducing punch {0}:
+518	Reproduction finished: originals in the read stacker, copies in the punch stacker.
+519	Restore factory wiring
+520	R{0} · {1}st reading, column {2}: punches of the incoming card (output)
+521	R{0} · {1}nd reading, column {2}: punches of the card being processed (output)
+522	R{0} → CA.{1} (click to remove)
+523	R{0} → CB.{1} (click to remove)
+524	R{0} → E.{1}A.{2} (click to remove)
+525	R{0} → PR.{1} (click to remove)
+526	R{0} → PU.{1} (click to remove)
+528	BALANCES
+529	SECOND READING · {0}nd reading (outputs, columns {1}-{2})
+531	NO PANEL
+534	SP.START · SUMMARY PUNCH START: the {0} punches a card on this cycle
+539	SUMMARY PUNCH · {0} punch magnets (inputs, columns {1}-{2})
+540	Exit tutorial
+541	Room
+542	Machine room
+543	Previous balance
+544	Previous balance: yesterday's balance cards are in the steel file (on the left). Originals never leave the file: reproduce them on the {0}, return the originals and add the copies to the entries. After the trial balance, file the new balances the {1} punched.
+545	New balance
+546	Balances filed
+547	New balances in the file. That's how the books carry over from one day to the next, and at month end, from one month to the next.
+548	Santo André, March {0}. You run the IBM {1} keypunch at Fundição Tamanduateí. Salesmen send handwritten orders; each item becomes an {2}-column card. At the end of the shift the deck goes through the sorter and the accounting machine in the machine room, and you punch the day's accounting entries.
+549	If an original is lost or damaged, the whole ledger is left without a balance. That's why I never take the original to the machines: I take it out of the file, make a copy on the {0} reproducing punch and return the original.
+550	Without punch {0} (or {1}) the column stays in mode
+551	Keypunch Section
+553	Yes
+554	Sound: on
+555	Adding machine
+556	Olivetti Summa {0} adding machine
+557	Olivetti Summa {0} adding machine:
+558	Summa {0} adding machine
+559	Adding up all salesmen's commissions: NCr$ {0}.
+560	Adding {0} times won't do. The trick is to use the decimal places: {1} × {2} is the same as {3} × {4}. I key {5} with {6} zeros after it,
+561	I'm the section's senior operator. I check the {0} switches: program lever down (starwheels reading the program card), AUTO SKIP DUP and AUTO FEED on, PROG SEL on ONE, which is the order program.
+562	Starwheels down: the program controls the keypunch.
+563	Starwheels raised: program off. Now the drum can come out.
+564	Your turn
+566	Symbols
+568	PRICE LIST
+569	DRUM OUT OF THE MACHINE
+570	KEYBOARD LOCKED
+571	REMOVE
+572	TAKE FROM HOPPER ({0})
+573	TAKE FROM STACKER ({0})
+574	ORDER TOTAL
+578	List
+579	Drum back
+580	Drum in place and lever down: the program controls the machine again.
+581	Keyboard
+582	Computer keyboard
+583	Keyboard and switch panel
+584	Keyboard locked
+585	Keyboard, program card, {0} sorter, {1} accounting machine and {2} reproducing punch follow the IBM manuals. Olivetti Summa {3} adding machine.
+586	Keyboard, codes, switches, speeds and feed sequence follow the IBM {0} Reference Manual (GA{1}-{2}) and the theory of operation manual (S{3}-{4}). The AUX DUP key belongs to an optional feature this machine doesn't have; the two unlabeled keys in figure {5} have no function.
+587	Keyboard:
+588	Remove all wires
+589	Every column
+590	All accounts check out.
+591	All items punched: the order slip goes to the file.
+592	Commission total
+593	{0} final total NCr$
+595	Sent to the warehouse
+597	Tutorial:
+598	Tutorial: the operator shows a whole day
