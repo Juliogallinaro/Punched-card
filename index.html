@@ -1028,12 +1028,15 @@ function init3D(){
    box(22,12,22,bL,-11,29.6,1.5,g);
    box(22,12,9,bL,11,29.6,-7,g);
    // empilhadores: nichos estreitos, da largura de um cartão (3¼ pol.), com a testeira por cima
-   [6.1,16.5].forEach(x=>{box(4.4,8,.4,inM,x,27.6,2.6,g);box(4.4,.4,10,inM,x,23.8,7.5,g);box(4.4,4.2,13,bL,x,33.5,6.1,g)});
-   [[1.95,3.9],[11.3,6],[20.35,3.3]].forEach(([x,w])=>box(w,12,13,bL,x,29.6,6.1,g));
+   // nichos altos; as divisórias têm a quina de cima bem curvada para trás, como na figura
+   [6.1,16.5].forEach(x=>{box(4.4,11.6,.4,inM,x,29.4,.2,g);box(4.4,.4,12,inM,x,23.8,6.4,g)});
+   {const R=4.2,z0=-.4,z1=12.6,y0=23.6,y1=35.6,s=new T.Shape();s.moveTo(z0,y0);s.lineTo(z1,y0);s.lineTo(z1,y1-R);s.quadraticCurveTo(z1,y1,z1-R,y1);s.lineTo(z0,y1);s.lineTo(z0,y0);
+    [[1.95,3.9],[11.3,6],[20.35,3.3]].forEach(([x,w])=>{const m=new T.Mesh(new T.ExtrudeGeometry(s,{depth:w,bevelEnabled:true,bevelThickness:.12,bevelSize:.12,bevelSegments:2,curveSegments:14}),bL);
+      m.rotation.y=-Math.PI/2;m.position.set(x+w/2,0,0);m.castShadow=m.receiveShadow=true;g.add(m)})}
    V.m.p514ro=stackMesh(g,6.1,24.0,7.5,true);V.m.p514ro.userData.base.rot=true;
    V.m.p514stk=stackMesh(g,16.5,24.0,7.5,true);V.m.p514stk.userData.base.rot=true;
-   {const hr=new T.Mesh(new T.BoxGeometry(4.4,8,10),new T.MeshBasicMaterial({visible:false}));hr.position.set(6.1,27.6,7.5);hr.userData.onClick=()=>{takeFrom('514r')};g.add(hr);V.click.push(hr);
-    const hp=new T.Mesh(new T.BoxGeometry(4.4,8,10),new T.MeshBasicMaterial({visible:false}));hp.position.set(16.5,27.6,7.5);hp.userData.onClick=()=>{takeFrom('514')};g.add(hp);V.click.push(hp)}
+   {const hr=new T.Mesh(new T.BoxGeometry(4.4,10,10),new T.MeshBasicMaterial({visible:false}));hr.position.set(6.1,28.5,7.5);hr.userData.onClick=()=>{takeFrom('514r')};g.add(hr);V.click.push(hr);
+    const hp=new T.Mesh(new T.BoxGeometry(4.4,10,10),new T.MeshBasicMaterial({visible:false}));hp.position.set(16.5,28.5,7.5);hp.userData.onClick=()=>{takeFrom('514')};g.add(hp);V.click.push(hp)}
    // unidade de luzes e teclas (signal light unit)
    box(9,1,1,mat('#c9ccc6',.35,.4),-4.8,35.1,12.4,g);
    V.m514L={};[['pw','#e04a3a'],['run','#e8b49a'],['feed','#d8584a'],['cmp','#9aa0a2']].forEach(([k,c],i)=>{const m=new T.Mesh(new T.BoxGeometry(.8,.5,.3),new T.MeshStandardMaterial({color:c,emissive:'#000'}));m.position.set(-8.6+i*.95,35.15,12.95);g.add(m);V.m514L[k]=m});
