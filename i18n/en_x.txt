@@ -29,3 +29,19 @@
 "Recorde neste navegador: {0} pontos"	Record in this browser: {0} points
 "Os {0} cartões de pedido já estão na minha mão, classificados por vendedor."	The {0} order cards are already in my hand, sorted by salesman.
 "Tutorial: completo ou por etapa"	Tutorial: full or by stage
+"Créditos"	Credits
+"Criação e direção"	Created and directed by
+"Contato"	Contact
+"Copiar"	Copy
+"Copiado"	Copied
+"Código"	Code
+"Escrito com o Claude (Anthropic). Repositório:"	Written with Claude (Anthropic). Repository:
+"Fontes de época"	Period sources
+"IBM {0} Card Punch Reference Manual (GA{1}-{2}) e Theory of Operation (S{3}-{4})"	IBM {0} Card Punch Reference Manual (GA{1}-{2}) and Theory of Operation (S{3}-{4})
+"IBM {0} Accounting Machine Manual of Operation; fluxo de trabalho F{1}-{2}"	IBM {0} Accounting Machine Manual of Operation; F{1}-{2} workflow
+"Manuais e fotos da Olivetti Summa {0} em jaapsch.net"	Olivetti Summa {0} manuals and photos at jaapsch.net
+"Fotos e notas da classificadora {0} em trmm.net"	Photos and notes on the {0} sorter at trmm.net
+"Three.js (licença MIT). Fontes Archivo, Big Shoulders Display, IBM Plex Mono e Kalam (Google Fonts, SIL Open Font License)."	Three.js (MIT license). Archivo, Big Shoulders Display, IBM Plex Mono and Kalam fonts (Google Fonts, SIL Open Font License).
+"A Fundição Tamanduateí, os vendedores, os clientes e os pedidos são fictícios. IBM e Olivetti são marcas dos seus donos; este jogo não tem ligação com elas."	Fundição Tamanduateí, its salesmen, customers and orders are fictional. IBM and Olivetti are trademarks of their owners; this game is not affiliated with them.
+"Achou um erro ou tem uma sugestão? Abra um tópico nas"	Found a mistake or have a suggestion? Open a topic in the
+"Issues do repositório no GitHub"	GitHub repository Issues
